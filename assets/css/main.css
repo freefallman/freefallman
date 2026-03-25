@@ -3996,4 +3996,30 @@ input, select, textarea {
 
 	body.is-mobile.landing #footer {
 		background-color: #1d242a;
+	#banner {
+    min-height: 60vh;
+    padding: 100px 0;
+}
+
+#banner .image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Make it even taller on large desktop screens */
+@media screen and (min-width: 1200px) {
+    #banner {
+        min-height: 70vh;
+        padding: 140px 0;
+    }
+}
+
+/* Keep it nice and compact on phones */
+@media screen and (max-width: 736px) {
+    #banner {
+        min-height: 50vh;
+        padding: 60px 0;
+    }
 	}
