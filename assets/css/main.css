@@ -4128,3 +4128,75 @@ input, select, textarea {
         padding: 120px 20px 110px 20px !important;
     }
 }
+/* ============================================= */
+/* Freefall Adventures Skydiving Color Overrides */
+/* ============================================= */
+
+/* Primary Sky Blue */
+a, a:hover, 
+.button, .button:hover,
+input[type="submit"], input[type="reset"], input[type="button"],
+.button.primary,
+#header nav ul li a:hover,
+.spotlight .content h2,
+.major h2 {
+    color: #0077B6;
+}
+
+.button.primary,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+    background-color: #0077B6;
+    border-color: #0077B6;
+}
+
+.button.primary:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover {
+    background-color: #005f8f;
+    border-color: #005f8f;
+}
+
+/* Bright Orange Accent for CTA buttons (the big "Activate" button) */
+.button.fit.primary,
+.button.primary.fit {
+    background-color: #FF6B00 !important;
+    border-color: #FF6B00 !important;
+    color: white !important;
+}
+
+.button.fit.primary:hover,
+.button.primary.fit:hover {
+    background-color: #E55A00 !important;
+    border-color: #E55A00 !important;
+}
+
+/* Dark backgrounds and text */
+.wrapper.style2,
+.wrapper.style4,
+#header.alt {
+    background-color: #0A1F2F;
+    color: #E6EEF4;
+}
+
+/* Footer */
+#footer {
+    background-color: #081722;
+}
+
+/* Optional banner overlay (makes logo stand out more) */
+#banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 31, 47, 0.45);
+    z-index: 1;
+    pointer-events: none;
+}
+
+#banner .inner {
+    position: relative;
+    z-index: 2;
+}
