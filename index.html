@@ -22,7 +22,7 @@ l<!DOCTYPE HTML>
 </style>
 	<style>
 /* ============================================= */
-/* FREEFALL ADVENTURES - FINAL COLOR OVERRIDES   */
+/* FREEFALL ADVENTURES - FINAL COLOR FIXES       */
 /* ============================================= */
 
 a, a:hover, 
@@ -49,7 +49,6 @@ button {
 .button:hover,
 .button.primary:hover {
     background-color: #005f8f !important;
-    border-color: #005f8f !important;
 }
 
 /* Bright Orange ACTIVATE Button */
@@ -75,6 +74,12 @@ body.landing #page-wrapper {
     background-color: #0A1F2F !important;
 }
 
+/* Fix the turquoise "One" section */
+.wrapper.style1 {
+    background-color: #0A1F2F !important;
+    color: #E6EEF4 !important;
+}
+
 /* Footer */
 #footer {
     background-color: #081722 !important;
@@ -90,21 +95,20 @@ body.landing #page-wrapper {
     color: #00B4FF !important;
 }
 
-/* Banner Improvements */
+/* Banner */
 #banner {
-    background-color: #0A1F2F !important;
     background-image: url('images/banner.jpg') !important;
     background-position: center center !important;
     background-size: cover !important;
     background-attachment: scroll !important;
+    background-color: #0A1F2F !important;
 }
 
-/* Dark overlay on banner so logo stands out */
 #banner::before {
     content: '';
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(10, 31, 47, 0.5) !important;
+    background: rgba(10, 31, 47, 0.45) !important;
     z-index: 1;
 }
 
@@ -113,7 +117,6 @@ body.landing #page-wrapper {
     z-index: 2;
 }
 </style>
-</style>	
 	</head>
 	<body class="landing is-preload">
 
