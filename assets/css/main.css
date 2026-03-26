@@ -4087,16 +4087,22 @@ input, select, textarea {
     }
 }
 /* ============================================= */
-/* Freefall Adventures Skydiving Color Overrides */
+/* Freefall Adventures Skydiving Color Overrides - STRONGER VERSION */
 /* ============================================= */
 
-/* Primary Sky Blue - Links, headings, general accents */
+:root {
+    --primary-color: #0077B6;
+    --primary-hover: #005f8f;
+    --accent-color: #FF6B00;
+    --accent-hover: #E55A00;
+}
+
+/* Force sky blue on links, headings, and nav */
 a, 
-a:hover, 
-#header nav ul li a, 
+#header nav ul li a,
 #header nav ul li a:hover,
-.spotlight .content h2, 
-.major h2, 
+.spotlight .content h2,
+.major h2,
 h1, h2, h3, h4, h5, h6 {
     color: #0077B6 !important;
 }
@@ -4123,10 +4129,11 @@ button:hover,
     border-color: #005f8f !important;
 }
 
-/* Bright Orange CTA Button (the big "Activate" button) */
+/* Bright Orange CTA Button ("Activate" button) - this is the most important one */
 .button.fit.primary,
 .button.primary.fit,
-ul.actions .button.primary {
+ul.actions .button.primary,
+ul.actions.stacked .button.primary {
     background-color: #FF6B00 !important;
     border-color: #FF6B00 !important;
     color: #ffffff !important;
@@ -4145,7 +4152,6 @@ ul.actions .button.primary:hover {
 #header,
 #header.alt {
     background-color: #0A1F2F !important;
-    color: #E6EEF4 !important;
 }
 
 /* Footer */
@@ -4153,11 +4159,16 @@ ul.actions .button.primary:hover {
     background-color: #081722 !important;
 }
 
-/* Form focus rings (optional - matches sky blue) */
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="email"]:focus,
-select:focus,
-textarea:focus {
+/* Social icons in footer (already partially working) */
+#footer .icons a {
+    color: #0077B6 !important;
+}
+
+#footer .icons a:hover {
+    color: #00B4FF !important;
+}
+
+/* Form focus ring */
+input:focus, select:focus, textarea:focus {
     box-shadow: 0 0 0 2px #0077B6 !important;
 }
