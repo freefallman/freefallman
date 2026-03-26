@@ -49,48 +49,6 @@
 #banner .inner {
     position: relative;
     z-index: 2;
-}/* ============================================= */
-/* Freefall Adventures Skydiving Color Scheme    */
-/* ============================================= */
-
-:root {
-    /* Primary - Sky Blue (trust, open sky, freedom) */
-    --primary-color: #0077B6;
-    --primary-hover: #005f8f;
-
-    /* Accent - Bright Orange (energy, parachutes, excitement) */
-    --accent-color: #FF6B00;
-    --accent-hover: #E55A00;
-
-    /* Secondary Light Sky Blue */
-    --secondary-color: #00B4FF;
-
-    /* Dark background / text areas */
-    --dark-bg: #0A1F2F;
-    --dark-text: #E6EEF4;
-
-    /* Light areas */
-    --light-bg: #F8F9FA;
-    --light-text: #1C2B38;
-}
-
-/* Optional subtle dark overlay for the banner to make logo pop */
-#banner::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(10, 31, 47, 0.45); /* dark blue overlay */
-    z-index: 1;
-    pointer-events: none;
-}
-
-/* Make sure logo stays above overlay */
-#banner .inner {
-    position: relative;
-    z-index: 2;
 }
 
 html, body, div, span, applet, object,
@@ -4132,71 +4090,74 @@ input, select, textarea {
 /* Freefall Adventures Skydiving Color Overrides */
 /* ============================================= */
 
-/* Primary Sky Blue */
-a, a:hover, 
-.button, .button:hover,
-input[type="submit"], input[type="reset"], input[type="button"],
-.button.primary,
+/* Primary Sky Blue - Links, headings, general accents */
+a, 
+a:hover, 
+#header nav ul li a, 
 #header nav ul li a:hover,
-.spotlight .content h2,
-.major h2 {
-    color: #0077B6;
+.spotlight .content h2, 
+.major h2, 
+h1, h2, h3, h4, h5, h6 {
+    color: #0077B6 !important;
 }
 
-.button.primary,
+/* Primary Sky Blue Buttons */
 input[type="submit"],
 input[type="reset"],
-input[type="button"] {
-    background-color: #0077B6;
-    border-color: #0077B6;
+input[type="button"],
+button,
+.button,
+.button.primary {
+    background-color: #0077B6 !important;
+    border-color: #0077B6 !important;
+    color: #ffffff !important;
 }
 
-.button.primary:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover,
-input[type="button"]:hover {
-    background-color: #005f8f;
-    border-color: #005f8f;
+input[type="button"]:hover,
+button:hover,
+.button:hover,
+.button.primary:hover {
+    background-color: #005f8f !important;
+    border-color: #005f8f !important;
 }
 
-/* Bright Orange Accent for CTA buttons (the big "Activate" button) */
+/* Bright Orange CTA Button (the big "Activate" button) */
 .button.fit.primary,
-.button.primary.fit {
+.button.primary.fit,
+ul.actions .button.primary {
     background-color: #FF6B00 !important;
     border-color: #FF6B00 !important;
-    color: white !important;
+    color: #ffffff !important;
 }
 
 .button.fit.primary:hover,
-.button.primary.fit:hover {
+.button.primary.fit:hover,
+ul.actions .button.primary:hover {
     background-color: #E55A00 !important;
     border-color: #E55A00 !important;
 }
 
-/* Dark backgrounds and text */
+/* Dark backgrounds */
 .wrapper.style2,
 .wrapper.style4,
+#header,
 #header.alt {
-    background-color: #0A1F2F;
-    color: #E6EEF4;
+    background-color: #0A1F2F !important;
+    color: #E6EEF4 !important;
 }
 
 /* Footer */
 #footer {
-    background-color: #081722;
+    background-color: #081722 !important;
 }
 
-/* Optional banner overlay (makes logo stand out more) */
-#banner::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: rgba(10, 31, 47, 0.45);
-    z-index: 1;
-    pointer-events: none;
-}
-
-#banner .inner {
-    position: relative;
-    z-index: 2;
+/* Form focus rings (optional - matches sky blue) */
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+    box-shadow: 0 0 0 2px #0077B6 !important;
 }
