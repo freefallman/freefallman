@@ -21,9 +21,12 @@ l<!DOCTYPE HTML>
     }
 </style>
 	<style>
-/* === STRONG OVERRIDES FOR FREEFALL ADVENTURES === */
+/* ============================================= */
+/* FREEFALL ADVENTURES - FINAL COLOR OVERRIDES   */
+/* ============================================= */
 
-a, a:hover, h1, h2, h3, h4, h5, h6,
+a, a:hover, 
+h1, h2, h3, h4, h5, h6,
 .spotlight .content h2,
 .major h2,
 #header nav ul li a,
@@ -31,7 +34,7 @@ a, a:hover, h1, h2, h3, h4, h5, h6,
     color: #0077B6 !important;
 }
 
-/* Sky Blue primary buttons */
+/* Sky Blue Primary Buttons */
 .button,
 .button.primary,
 input[type="submit"],
@@ -40,39 +43,35 @@ input[type="button"],
 button {
     background-color: #0077B6 !important;
     border-color: #0077B6 !important;
-    color: #ffffff !important;
+    color: white !important;
 }
 
 .button:hover,
-.button.primary:hover,
-input[type="submit"]:hover,
-input[type="reset"]:hover,
-input[type="button"]:hover,
-button:hover {
+.button.primary:hover {
     background-color: #005f8f !important;
     border-color: #005f8f !important;
 }
 
-/* Bright Orange "ACTIVATE" button */
+/* Bright Orange ACTIVATE Button */
 .button.fit.primary,
 .button.primary.fit,
 ul.actions .button.primary {
     background-color: #FF6B00 !important;
     border-color: #FF6B00 !important;
-    color: #ffffff !important;
+    color: white !important;
 }
 
 .button.fit.primary:hover,
-.button.primary.fit:hover,
-ul.actions .button.primary:hover {
+.button.primary.fit:hover {
     background-color: #E55A00 !important;
 }
 
-/* Dark navy header & sections */
+/* Dark Navy Backgrounds */
 #header,
 #header.alt,
 .wrapper.style2,
-.wrapper.style4 {
+.wrapper.style4,
+body.landing #page-wrapper {
     background-color: #0A1F2F !important;
 }
 
@@ -81,7 +80,7 @@ ul.actions .button.primary:hover {
     background-color: #081722 !important;
 }
 
-/* Social icons */
+/* Social Icons */
 #footer .icons a,
 #footer .icons a:hover {
     color: #0077B6 !important;
@@ -90,6 +89,30 @@ ul.actions .button.primary:hover {
 #footer .icons a:hover {
     color: #00B4FF !important;
 }
+
+/* Banner Improvements */
+#banner {
+    background-color: #0A1F2F !important;
+    background-image: url('images/banner.jpg') !important;
+    background-position: center center !important;
+    background-size: cover !important;
+    background-attachment: scroll !important;
+}
+
+/* Dark overlay on banner so logo stands out */
+#banner::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(10, 31, 47, 0.5) !important;
+    z-index: 1;
+}
+
+#banner .inner {
+    position: relative;
+    z-index: 2;
+}
+</style>
 </style>	
 	</head>
 	<body class="landing is-preload">
