@@ -4087,18 +4087,13 @@ input, select, textarea {
     }
 }
 /* ============================================= */
-/* Freefall Adventures Skydiving Color Overrides - STRONGER VERSION */
+/* FREEFALL ADVENTURES - STRONG COLOR OVERRIDES  */
+/* Put this at the VERY BOTTOM of main.css       */
 /* ============================================= */
 
-:root {
-    --primary-color: #0077B6;
-    --primary-hover: #005f8f;
-    --accent-color: #FF6B00;
-    --accent-hover: #E55A00;
-}
-
-/* Force sky blue on links, headings, and nav */
-a, 
+a,
+a:hover,
+a:visited,
 #header nav ul li a,
 #header nav ul li a:hover,
 .spotlight .content h2,
@@ -4107,7 +4102,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #0077B6 !important;
 }
 
-/* Primary Sky Blue Buttons */
+/* Sky Blue Primary Buttons */
 input[type="submit"],
 input[type="reset"],
 input[type="button"],
@@ -4129,7 +4124,7 @@ button:hover,
     border-color: #005f8f !important;
 }
 
-/* Bright Orange CTA Button ("Activate" button) - this is the most important one */
+/* Bright Orange CTA Button ("Activate") */
 .button.fit.primary,
 .button.primary.fit,
 ul.actions .button.primary,
@@ -4146,7 +4141,7 @@ ul.actions .button.primary:hover {
     border-color: #E55A00 !important;
 }
 
-/* Dark backgrounds */
+/* Dark navy backgrounds */
 .wrapper.style2,
 .wrapper.style4,
 #header,
@@ -4159,8 +4154,9 @@ ul.actions .button.primary:hover {
     background-color: #081722 !important;
 }
 
-/* Social icons in footer (already partially working) */
-#footer .icons a {
+/* Social icons (X, Facebook, YouTube, Email) */
+#footer .icons a,
+#footer .icons a:hover {
     color: #0077B6 !important;
 }
 
@@ -4168,7 +4164,9 @@ ul.actions .button.primary:hover {
     color: #00B4FF !important;
 }
 
-/* Form focus ring */
-input:focus, select:focus, textarea:focus {
+/* Form focus */
+input:focus,
+select:focus,
+textarea:focus {
     box-shadow: 0 0 0 2px #0077B6 !important;
 }
