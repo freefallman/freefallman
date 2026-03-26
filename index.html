@@ -41,16 +41,17 @@ l<!DOCTYPE HTML>
 
 				<!-- Banner -->
 <section id="banner" style="
-    background: #0f0f0f;                    /* solid dark color (looks great with your logo) */
-    /* Uncomment the next line if you want a background IMAGE instead: */
-    /* background-image: url('images/your-background.jpg'); */
+    background-image: url('images/banner.jpg');
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: scroll;          /* THIS fixes the mobile problem */
+    background-attachment: scroll;   /* Critical fix for mobile (especially iPhone Safari) */
     min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 ">
-    <div class="inner" style="padding: 0 !important;">
+    <div class="inner" style="padding: 0 !important; width: 100%; text-align: center;">
         <div class="image">
             <img src="images/Freefall Adventures logo.png" 
                  alt="Freefall Adventures Logo"
