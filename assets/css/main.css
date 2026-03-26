@@ -3996,52 +3996,49 @@ input, select, textarea {
 
 	body.is-mobile.landing #footer {
 		background-color: #1d242a;
-	#banner {
-    min-height: 60vh;
-    padding: 100px 0;
-}
-{
-	#banner {
-    min-height: 80vh !important;
-    padding: 200px 0 180px 0 !important;
+	/* === FORCE Banner to show full logo - no cropping on desktop === */
+#banner {
+    min-height: 90vh !important;
+    height: auto !important;
+    padding: 240px 20px 220px 20px !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    background: none !important;           /* removes any default background that might interfere */
+    background: none !important;
+    background-color: #1a1a1a !important;   /* optional dark background so logo stands out */
 }
 
 #banner .inner {
-    width: 100% !important;
-    max-width: 1400px !important;
+    padding: 0 !important;
     margin: 0 auto !important;
-    padding: 0 40px !important;
+    max-width: 1400px !important;
 }
 
 #banner .image img {
     max-width: 100% !important;
-    max-height: 70vh !important;
+    max-height: 78vh !important;
     height: auto !important;
     width: auto !important;
     display: block !important;
     margin: 0 auto !important;
-	}
+}
 
-/* Extra space for very large desktop screens */
+/* Very large desktops */
 @media screen and (min-width: 1200px) {
     #banner {
-        min-height: 85vh !important;
-        padding: 260px 0 200px 0 !important;
+        min-height: 95vh !important;
+        padding: 280px 20px 260px 20px !important;
     }
     
     #banner .image img {
-        max-height: 75vh !important;
+        max-height: 82vh !important;
     }
 }
 
-/* Mobile remains balanced */
+/* Mobile - keep it reasonable */
 @media screen and (max-width: 736px) {
     #banner {
-        min-height: 60vh !important;
-        padding: 100px 0 90px 0 !important;
+        min-height: 65vh !important;
+        padding: 120px 20px 110px 20px !important;
     }
 }
