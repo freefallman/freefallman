@@ -145,7 +145,32 @@ a:hover {
 a img:hover {
     transform: scale(1.05) !important;   /* Only 5% for images so it looks natural */
 }
-		
+/* ============================================= */
+/* MENU LINKS - BETTER HOVER EFFECT             */
+/* ============================================= */
+
+#header nav ul li a,
+#header nav ul li a:hover,
+#menu ul li a,
+#menu ul li a:hover {
+    transition: all 0.3s ease;
+    color: #0077B6 !important;
+}
+
+#header nav ul li a:hover,
+#menu ul li a:hover {
+    color: #00B4FF !important;           /* Brighter sky blue on hover */
+    transform: scale(1.08);              /* ~8% enlarge on hover */
+    text-decoration: underline;          /* Clean underline */
+    text-underline-offset: 4px;
+}
+
+/* Optional: Slight background highlight on hover for the mobile menu items */
+#menu ul li a:hover {
+    background-color: rgba(0, 183, 255, 0.1);
+    border-radius: 4px;
+    padding: 6px 12px;
+}		
 </style>
 	</head>
 	<body class="landing is-preload">
