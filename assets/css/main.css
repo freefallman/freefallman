@@ -7,6 +7,92 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+/* ============================================= */
+/* Freefall Adventures Skydiving Color Scheme    */
+/* ============================================= */
+
+:root {
+    /* Primary - Sky Blue (trust, open sky, freedom) */
+    --primary-color: #0077B6;
+    --primary-hover: #005f8f;
+
+    /* Accent - Bright Orange (energy, parachutes, excitement) */
+    --accent-color: #FF6B00;
+    --accent-hover: #E55A00;
+
+    /* Secondary Light Sky Blue */
+    --secondary-color: #00B4FF;
+
+    /* Dark background / text areas */
+    --dark-bg: #0A1F2F;
+    --dark-text: #E6EEF4;
+
+    /* Light areas */
+    --light-bg: #F8F9FA;
+    --light-text: #1C2B38;
+}
+
+/* Optional subtle dark overlay for the banner to make logo pop */
+#banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(10, 31, 47, 0.45); /* dark blue overlay */
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Make sure logo stays above overlay */
+#banner .inner {
+    position: relative;
+    z-index: 2;
+}/* ============================================= */
+/* Freefall Adventures Skydiving Color Scheme    */
+/* ============================================= */
+
+:root {
+    /* Primary - Sky Blue (trust, open sky, freedom) */
+    --primary-color: #0077B6;
+    --primary-hover: #005f8f;
+
+    /* Accent - Bright Orange (energy, parachutes, excitement) */
+    --accent-color: #FF6B00;
+    --accent-hover: #E55A00;
+
+    /* Secondary Light Sky Blue */
+    --secondary-color: #00B4FF;
+
+    /* Dark background / text areas */
+    --dark-bg: #0A1F2F;
+    --dark-text: #E6EEF4;
+
+    /* Light areas */
+    --light-bg: #F8F9FA;
+    --light-text: #1C2B38;
+}
+
+/* Optional subtle dark overlay for the banner to make logo pop */
+#banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(10, 31, 47, 0.45); /* dark blue overlay */
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Make sure logo stays above overlay */
+#banner .inner {
+    position: relative;
+    z-index: 2;
+}
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
