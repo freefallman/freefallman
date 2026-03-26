@@ -20,7 +20,7 @@ l<!DOCTYPE HTML>
         }
     }
 </style>
-	<style>
+<style>
 /* ============================================= */
 /* FREEFALL ADVENTURES - FINAL COLOR FIXES       */
 /* ============================================= */
@@ -128,8 +128,9 @@ body.landing #page-wrapper {
     position: relative;
     z-index: 2;
 }
+
 /* ============================================= */
-/* LINK HOVER ENLARGE EFFECT - 15% BIGGER       */
+/* GENERAL LINK HOVER ENLARGE (15%)             */
 /* ============================================= */
 
 a {
@@ -138,68 +139,38 @@ a {
 
 a:hover {
     transform: scale(1.15) !important;
-    color: #00B4FF !important;   /* Optional: brighter color on hover */
 }
 
-/* Make sure the logo link doesn't get distorted */
+/* So the Skydive Milwaukee logo doesn't stretch too much */
 a img:hover {
-    transform: scale(1.05) !important;   /* Only 5% for images so it looks natural */
-}
-/* ============================================= */
-/* MENU LINKS - BETTER HOVER EFFECT             */
-/* ============================================= */
-
-#header nav ul li a,
-#header nav ul li a:hover,
-#menu ul li a,
-#menu ul li a:hover {
-    transition: all 0.3s ease;
-    color: #0077B6 !important;
+    transform: scale(1.05) !important;
 }
 
-#header nav ul li a:hover,
-#menu ul li a:hover {
-    color: #00B4FF !important;           /* Brighter sky blue on hover */
-    transform: scale(1.08);              /* ~8% enlarge on hover */
-    text-decoration: underline;          /* Clean underline */
-    text-underline-offset: 4px;
-}
-
-/* Optional: Slight background highlight on hover for the mobile menu items */
-#menu ul li a:hover {
-    background-color: rgba(0, 183, 255, 0.1);
-    border-radius: 4px;
-    padding: 6px 12px;
-}
 /* ============================================= */
 /* HAMBURGER MENU - BETTER READABILITY          */
 /* ============================================= */
 
 #menu {
-    background-color: #0A1F2F !important;   /* Dark navy matching your site theme */
+    background-color: #0A1F2F !important;
     color: #E6EEF4 !important;
 }
 
 #menu ul li a {
-    color: #E6EEF4 !important;              /* Light off-white for excellent contrast */
+    color: #E6EEF4 !important;
     font-weight: 500;
     transition: all 0.3s ease;
 }
 
 #menu ul li a:hover {
-    color: #00B4FF !important;              /* Bright sky blue on hover */
+    color: #00B4FF !important;
     background-color: rgba(0, 180, 255, 0.15) !important;
     border-radius: 4px;
     transform: scale(1.05);
     padding: 8px 16px;
 }
 
-/* Optional: Make the menu toggle button (hamburger) match the theme */
-.menuToggle span {
-    background-color: #E6EEF4 !important;
-}	
 /* ============================================= */
-/* FIX MENU BUTTON BACKGROUND                   */
+/* FIX MENU BUTTON (MENU word) BACKGROUND       */
 /* ============================================= */
 
 .menuToggle {
@@ -213,7 +184,6 @@ a img:hover {
     border-radius: 4px;
 }
 
-/* Fix the white box around "MENU" text */
 #header nav ul li.special a.menuToggle {
     background-color: transparent !important;
     padding: 8px 16px;
@@ -221,8 +191,9 @@ a img:hover {
 }
 
 #header nav ul li.special a.menuToggle:hover {
-    background-color: rgba(0, 180, 255, 0.2) !important;		
-</style>
+    background-color: rgba(0, 180, 255, 0.2) !important;
+}
+</style>	
 	</head>
 	<body class="landing is-preload">
 
