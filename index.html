@@ -173,21 +173,19 @@ a img:hover {
 /* FIX MENU BUTTON (MENU word) BACKGROUND       */
 /* ============================================= */
 
-/* FIX MENU BUTTON (MENU word) BACKGROUND */
-.menuToggle {
+/* KILL THE HOVER BOX ON THE MENU TOGGLE */
+#header nav ul li.special a.menuToggle:hover,
+#header nav ul li.special a.menuToggle:active,
+#header nav ul li.special a.menuToggle:focus {
     background-color: transparent !important;
+    box-shadow: none !important;
     border: none !important;
-    color: #E6EEF4 !important;
+    color: #00B4FF !important; /* This keeps the text changing color so you know it's a link */
 }
 
-/* Updated hover rule to remove the blue background */
-.menuToggle:hover {
-    background-color: transparent !important; /* Changed from rgba(0, 183, 255, 0.15) */
-    color: #00B4FF !important;               /* Optional: Makes text blue on hover instead of the box */
-}
-
-#header nav ul li.special a.menuToggle:hover {
-    background-color: transparent !important; /* Changed from rgba(0, 180, 255, 0.2) */
+/* Ensure the span (the word "Menu") inside doesn't have its own background */
+#header nav ul li.special a.menuToggle:hover span {
+    background-color: transparent !important;
 }
 
 
