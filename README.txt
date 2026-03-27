@@ -21,4 +21,4 @@ Now fully devoted to Jesus, Howy serves as a trained facilitator of The Steps to
 ---
 
 **Ready to take the leap — in the air and in life?**  
-Visit [www.freefallman.com](https://www.freefallman.com)
+Visit (https://www.freefallman.com)
