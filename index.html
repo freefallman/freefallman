@@ -323,13 +323,18 @@ a img:hover {
 <!-- Three - Clean Return to Top -->
 <section id="three" class="wrapper alt style2" style="background-color: #0A1F2F !important;">
     <div class="inner" style="text-align: center; padding: 40px 20px;">
-        <ul class="actions" style="justify-content: center; margin: 0;">
+        <ul class="actions" style="justify-content: center; margin: 0; list-style: none;">
             <li>
                 <a href="#banner" 
-                   class="button fit" 
+                   class="button fit scrolly" 
                    style="font-size: 1.2em; 
-                          padding: 18px 50px;
-                          min-width: 280px;">
+                          min-width: 280px;
+                          display: inline-flex;    /* Added */
+                          align-items: center;     /* Added: Vertical center */
+                          justify-content: center; /* Added: Horizontal center */
+                          height: 70px;            /* Added: Consistent height */
+                          padding: 0 50px;         /* Updated: Removes top/bottom padding interference */
+                          text-align: center;">
                     RETURN TO TOP OF PAGE
                 </a>
             </li>
