@@ -335,20 +335,33 @@ a img:hover {
 <!-- Three - Clean Return to Top -->
 
 <!-- Footer -->
-<footer id="footer-return-top" style="background-color: #081722 !important; padding: 40px 0 !important; display: flex; flex-direction: column; align-items: center;">
+<footer id="footer" style="background-color: #081722 !important; padding: 60px 0 !important; display: flex; flex-direction: column; align-items: center;">
     
-    <!-- RETURN TO TOP BUTTON (Hollow with Border) -->
-    <div style="margin-bottom: 50px;"> <!-- Controls the gap from the picture above -->
-     <a href="#banner" 
-   id="footer-return-top" 
-   class="scrolly" 
-   style="... (keep your other styles) ...">
-    RETURN TO TOP OF PAGE
-</a>
-      </div>
+    <!-- RETURN TO TOP BUTTON -->
+    <div style="margin-bottom: 40px;"> 
+        <a href="#banner" 
+           id="footer-return-top" 
+           class="scrolly" 
+           style="font-size: 1.1em; 
+                  min-width: 320px;            /* Gives the button width */
+                  height: 65px;                /* Gives the button height */
+                  display: inline-flex;
+                  align-items: center;
+                  justify-content: center;
+                  background-color: #081722 !important; /* Matches footer background */
+                  border: 2px solid #0077B6 !important; /* Sky Blue Border */
+                  color: #0077B6 !important;           /* Sky Blue Text */
+                  border-radius: 4px;
+                  text-decoration: none;
+                  font-weight: 600;
+                  letter-spacing: 1.5px;
+                  transition: all 0.3s ease;">
+            RETURN TO TOP OF PAGE
+        </a>
+    </div>
 
     <!-- Social Icons -->
-    <ul class="icons" style="margin: 0 0 20px 0 !important; padding: 0;">
+    <ul class="icons" style="margin: 0 0 20px 0 !important; padding: 0; list-style: none; display: flex; gap: 20px;">
         <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
         <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
         <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
@@ -356,7 +369,7 @@ a img:hover {
     </ul>
 
     <!-- Copyright -->
-    <ul class="copyright" style="list-style: none; padding: 0; margin: 0; font-size: 0.8em; color: rgba(255,255,255,0.5);">
+    <ul class="copyright" style="list-style: none; padding: 0; margin: 0; font-size: 0.8em; color: rgba(255,255,255,0.5); display: flex; gap: 15px;">
         <li>&copy; 2026 FREEFALL ADVENTURES</li>
         <li>DESIGN: <a href="http://html5up.net">HTML5 UP</a></li>
     </ul>
