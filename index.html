@@ -173,25 +173,24 @@ a img:hover {
 /* FIX MENU BUTTON (MENU word) BACKGROUND       */
 /* ============================================= */
 
-/* KILL THE HOVER BOX ON THE MENU TOGGLE */
+/* 1. Remove the blue hover box from the word "Menu" and the hamburger icon */
 #header nav ul li.special a.menuToggle:hover,
 #header nav ul li.special a.menuToggle:active,
 #header nav ul li.special a.menuToggle:focus {
     background-color: transparent !important;
-    box-shadow: none !important;
-    border: none !important;
-    color: #00B4FF !important; /* This keeps the text changing color so you know it's a link */
 }
 
-/* Ensure the span (the word "Menu") inside doesn't have its own background */
-#header nav ul li.special a.menuToggle:hover span {
+/* 2. Target the specific background box created by the template */
+#header nav ul li.special a.menuToggle:hover::before {
     background-color: transparent !important;
+    display: none !important; /* This hides the box entirely */
 }
 
-
+/* 3. Ensure the icon and text remain visible and optionally change color instead */
 #header nav ul li.special a.menuToggle:hover {
-    background-color: rgba(0, 180, 255, 0.2) !important;
+    color: #00B4FF !important; /* Only the text and icon will turn blue now */
 }
+
 /* FORCE Section Three to match Section Two dark background */
 #three.wrapper.alt.style2,
 #three.wrapper.alt.style2 .inner {
