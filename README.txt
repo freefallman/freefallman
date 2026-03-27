@@ -1,7 +1,7 @@
 # FREEFALLMAN WEBSITE  
 **A site about skydiving and life**
 
-[![Watch the short video](https://img.youtube.com/vi/02jmhp6yhWM/maxresdefault.jpg)](https://youtu.be/02jmhp6yhWM)
+[![Watch the short video](https://img.youtube.com/vi/02jmhp6yhWM/maxresdefault.jpg)](https://youtu.be/02jmhp6yhWM?si=x2bE2WH8TVC6DYty)
 
 > "For God has not given us a spirit of fear, but of power and of love and of a sound mind." — 2 Timothy 1:7
 
