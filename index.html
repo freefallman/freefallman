@@ -340,29 +340,44 @@ a img:hover {
 <!-- Three - Clean Return to Top -->
 
 <!-- Footer -->
-<footer id="footer" style="background-color: #081722 !important; padding: 60px 0 !important; display: flex; flex-direction: column; align-items: center;">
+<footer id="footer" style="background-color: #081722 !important; padding: 80px 0 !important; display: flex; flex-direction: column; align-items: center;">
     
-    <!-- RETURN TO TOP BUTTON -->
-    <div style="margin-bottom: 40px;"> 
-    <a href="#banner" id="footer-return-top" class="scrolly" style="...">
-    RETURN TO TOP OF PAGE
-</a>
-  
+    <!-- RETURN TO TOP BUTTON - FORCED SIZE AND COLOR -->
+    <div style="margin-bottom: 50px; width: 100%; text-align: center;">
+        <a href="#banner" 
+           id="footer-return-top" 
+           class="scrolly" 
+           style="font-size: 1.1em !important; 
+                  min-width: 320px !important;            /* Forced Width */
+                  height: 70px !important;               /* Forced Height */
+                  display: inline-flex !important;       /* Makes it a solid box */
+                  align-items: center !important;        /* Centers text vertically */
+                  justify-content: center !important;     /* Centers text horizontally */
+                  /* COLORS */
+                  background-color: transparent !important; 
+                  border: 2px solid #0077B6 !important;  /* Sky Blue Border */
+                  color: #0077B6 !important;            /* Sky Blue Text */
+                  border-radius: 6px;
+                  text-decoration: none !important;
+                  font-weight: 600 !important;
+                  letter-spacing: 2px !important;
+                  transition: all 0.3s ease;">
+            RETURN TO TOP OF PAGE
+        </a>
     </div>
 
     <!-- Social Icons -->
-    <ul class="icons" style="margin: 0 0 20px 0 !important; padding: 0; list-style: none; display: flex; gap: 20px;">
-        <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-        <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-        <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-        <li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+    <ul class="icons" style="margin: 0 0 30px 0 !important; padding: 0; list-style: none; display: flex; justify-content: center; gap: 30px; width: 100%;">
+        <li><a href="#" class="icon brands fa-twitter" style="font-size: 1.5em;"><span class="label">Twitter</span></a></li>
+        <li><a href="#" class="icon brands fa-facebook-f" style="font-size: 1.5em;"><span class="label">Facebook</span></a></li>
+        <li><a href="#" class="icon brands fa-instagram" style="font-size: 1.5em;"><span class="label">Instagram</span></a></li>
+        <li><a href="#" class="icon solid fa-envelope" style="font-size: 1.5em;"><span class="label">Email</span></a></li>
     </ul>
 
     <!-- Copyright -->
-    <ul class="copyright" style="list-style: none; padding: 0; margin: 0; font-size: 0.8em; color: rgba(255,255,255,0.5); display: flex; gap: 15px;">
-        <li>&copy; 2026 FREEFALL ADVENTURES</li>
-        <li>DESIGN: <a href="http://html5up.net">HTML5 UP</a></li>
-    </ul>
+    <p style="margin: 0; font-size: 0.8em; color: rgba(255,255,255,0.4); letter-spacing: 1px;">
+        &copy; 2026 FREEFALL ADVENTURES &nbsp; | &nbsp; DESIGN: <a href="http://html5up.net" style="color: rgba(255,255,255,0.4) !important;">HTML5 UP</a>
+    </p>
 </footer>
 
 			</div>
