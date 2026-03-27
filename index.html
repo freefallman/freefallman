@@ -325,12 +325,12 @@ a img:hover {
         flex-direction: column;
         align-items: center; 
         justify-content: center; 
-        padding: 60px 0 100px 0 !important; 
+        /* 60px on top, 120px on bottom pushes the button lower relative to the center */
+        padding: 60px 0 120px 0 !important; 
         text-align: center;
         background-color: #0A1F2F !important;">
         
         <a href="#banner" 
-           id="return-button" 
            class="scrolly" 
            style="font-size: 1.2em; 
                   min-width: 280px;
@@ -339,7 +339,8 @@ a img:hover {
                   justify-content: center;
                   height: 70px;
                   padding: 0 50px;
-                  margin-top: 20px; 
+                  /* No 'button' class means these colors will finally stick */
+                  background-color: transparent !important; 
                   border: 2px solid #0077B6 !important; 
                   color: #0077B6 !important;
                   border-radius: 4px;
