@@ -103,38 +103,45 @@
     background-color: #0A1F2F;
 }
 
-.hero-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-    max-height: 520px;           /* Controls how tall the flyer appears */
-    object-fit: cover;           /* Keeps proportions nice */
+/* FULL VID FLYER - Shows the entire image without cropping */
+.hero-image {
+    margin: 0;
+    padding: 0;
+    background-color: #0A1F2F;
+    text-align: center;           /* Centers the image if it's narrower than screen */
 }
 
-/* TEXT SECTION BELOW THE IMAGE */
+.full-flyer {
+    width: 100%;
+    height: auto;
+    max-width: 1200px;            /* Prevents it from becoming ridiculously wide on large screens */
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;          /* This is the key - shows full image without cropping */
+}
+
+/* Optional: Add a subtle shadow or border if you want separation */
+.full-flyer {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Text section below */
 .wrapper.style5 {
     background-color: #0A1F2F !important;
     color: #E6EEF4 !important;
     padding: 5em 0 6em 0 !important;
-    margin-top: 0 !important;
-}
-
-.wrapper.style5 .major {
-    text-align: center;
-    margin-bottom: 3em;
 }
 
 .wrapper.style5 .major h2 {
     color: #0077B6 !important;
     font-size: 3.5rem !important;
-    font-weight: 700;
-    margin-bottom: 0.4em;
-    text-transform: none !important;
+    text-align: center;
 }
 
 .wrapper.style5 .major p {
     color: #E6EEF4 !important;
     font-size: 1.4rem !important;
+    text-align: center;
     max-width: 720px;
     margin: 0 auto;
 }
@@ -188,16 +195,16 @@
             </header>
 
             <!-- Main -->
-            <article id="main">
+           <article id="main">
 
-    <!-- HERO IMAGE - Text will be below it -->
+    <!-- FULL-SIZE VID FLYER - No cropping -->
     <header class="hero-image">
         <img src="images/Vid_flyer_ET.png" 
-             alt="Freefall Adventures Skydiving Experience" 
-             style="width: 100%; height: auto; display: block;">
+             alt="Freefall Adventures Services" 
+             class="full-flyer">
     </header>
 
-    <!-- TEXT CONTENT BELOW THE IMAGE -->
+    <!-- Text content below the full image -->
     <section class="wrapper style5">
         <div class="inner">
 
@@ -206,13 +213,14 @@
                 <p>What Freefall Adventures does for you</p>
             </header>
 
+            <!-- Your existing content here -->
             <h3>Text place holder</h3>
-            <p>Morbi mattis mi consectetur tortor elementum, varius pellentesque velit convallis. Aenean tincidunt lectus auctor mauris maximus, ac scelerisque ipsum tempor.</p>
+            <p>Morbi mattis mi consectetur tortor elementum...</p>
 
             <hr />
 
             <h4>Text placeholder</h4>
-            <p>Duis vulputate ex et ex tincidunt, quis lacinia velit. Morbi mattis mi consectetur tortor elementum.</p>
+            <p>Duis vulputate ex et ex tincidunt...</p>
 
         </div>
     </section>
