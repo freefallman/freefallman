@@ -9,61 +9,51 @@
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <style>
-/* === VERY STRONG OVERRIDES FOR SPECTRAL TEMPLATE === */
-
-body,
-#page-wrapper,
-#main,
-article#main {
-    background-color: #0A1F2F !important;
+ <style>
+/* 1. Keep the sky image but clear the template's default overlays */
+article#main > header {
+    background-color: transparent !important; /* Let the image show through */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.wrapper,
-.wrapper.style5,
-.inner,
-section,
-article header {
+/* 2. Optional: Lighten the overlay if the image is too dark */
+article#main > header:before {
+    background-color: rgba(10, 31, 47, 0.4) !important; /* Your #0A1F2F at 40% opacity */
+}
+
+/* 3. Force your color palette on sections below the sky */
+#main, .wrapper.style5, .inner {
     background-color: #0A1F2F !important;
     color: #E6EEF4 !important;
 }
 
-/* Force text and headings */
-h1, h2, h3, h4, h5, h6, p, a, a:hover {
+/* 4. Force text colors (headings and paragraphs) */
+h1, h2, h3, h4, h5, h6 {
     color: #0077B6 !important;
 }
 
-/* Mobile menu */
-#menu,
-#menu ul,
-#menu ul li {
-    background-color: #0A1F2F !important;
-}
-
-#menu ul li a {
+p, li, span {
     color: #E6EEF4 !important;
 }
 
-#menu ul li a:hover {
-    color: #00B4FF !important;
-    background-color: rgba(0, 180, 255, 0.25) !important;
-}
-
-/* Header */
-#header,
-#header.alt {
+/* 5. Navigation & Header Fix */
+#header {
     background-color: #0A1F2F !important;
 }
 
-#header h1 a {
-    color: #0077B6 !important;
+#header h1 a, #header .menuToggle {
+    color: #E6EEF4 !important;
 }
 
-/* Footer */
-#footer {
-    background-color: #081722 !important;
+/* 6. Fix the "Spectral" default horizontal lines */
+hr {
+    border-bottom-color: #0077B6 !important;
 }
 </style>
+
 </head>
     <body>
 
