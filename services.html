@@ -10,56 +10,62 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
-/* 1. TEXT COLOR - FORCE "OUR SERVICES" TO YOUR BLUE */
-/* Spectral uses 'article#main > header h2' for that big title */
-article#main > header h2, 
-#main h2, 
-#main h3, 
-#main h4, 
-#main h5, 
-#main h6 {
-    color: #0077B6 !important;
+/* 1. FIX THE SKY BACKGROUND (Services uses article header instead of #banner) */
+article#main > header {
+    background-image: url('images/banner.jpg') !important;
+    background-position: center center !important;
+    background-size: cover !important;
+    background-attachment: scroll !important;
+    background-color: #0A1F2F !important;
+    border-bottom: 0 !important;
+    margin: 0 !important;
+    padding: 12em 0 !important; /* Adjust this to change how much sky shows */
 }
 
-/* 2. SUBTEXT COLOR - FORCE THE SUBTITLE TO YOUR LIGHT BLUE */
-article#main > header p,
-#main p, 
-#main li, 
-#main .inner {
-    color: #E6EEF4 !important;
+/* 2. THE TINT OVER THE SKY (Matches your Index) */
+article#main > header:before {
+    content: '';
+    background: rgba(10, 31, 47, 0.45) !important;
 }
 
-/* 3. SECTION BACKGROUNDS - OVERRIDE THE WHITE "STYLE5" */
-/* 'style5' is the template's class for white sections. We must hit it directly. */
+/* 3. DARK NAVY BACKGROUNDS (Forces the white section to go dark) */
 body, 
 #page-wrapper, 
-#main,
+#main, 
 section.wrapper.style5, 
 .wrapper.style5 .inner {
     background-color: #0A1F2F !important;
-    background-image: none !important;
 }
 
-/* 4. KEEP THE SKY IMAGE */
-/* We target the header and the 'before' overlay to keep the clouds visible */
-article#main > header {
-    background-color: transparent !important;
+/* 4. TEXT COLORS (Matches Index) */
+h1, h2, h3, h4, h5, h6, 
+article#main > header h2, 
+.wrapper.style5 h3 {
+    color: #0077B6 !important;
+    text-transform: none !important; /* Stops "Our Services" from becoming "SERVICES" */
 }
 
-/* This is the dark 'tint' over the clouds. Adjust 0.3 for more or less visibility */
-article#main > header:before {
-    background-color: rgba(10, 31, 47, 0.3) !important;
+p, li, .wrapper.style5 .inner {
+    color: #E6EEF4 !important;
 }
 
-/* 5. TOP NAVIGATION BAR */
+/* 5. HEADER & NAVIGATION */
 #header {
     background-color: #0A1F2F !important;
 }
 
-#header h1 a, 
-#header .menuToggle {
+#header.alt {
+    background-color: transparent !important;
+}
+
+#header h1 a, #header .menuToggle {
     color: #E6EEF4 !important;
 }
+
+/* 6. LINK HOVER (Matches Index 15% grow) */
+a { transition: transform 0.3s ease; }
+a:hover { transform: scale(1.15) !important; color: #00B4FF !important; }
+
 </style>
 
 </head>
