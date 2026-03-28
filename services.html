@@ -9,45 +9,58 @@
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
- <style>
-/* 1. FORCE THE MAIN BACKGROUND */
-/* We target the specific template class 'style5' which is hardcoded as white */
-body, #page-wrapper, .wrapper.style5, #main {
-    background-color: #0A1F2F !important;
-}
-
-/* 2. TEXT COLORS */
-/* Targeting IDs specifically to beat the main.css priority */
-#main h2, #main h3, #main h4, #main h5, #main h6 {
+<style>
+/* 1. TEXT COLOR - FORCE "SERVICES" TO YOUR BLUE */
+/* Spectral uses 'article#main > header h2' for that big title */
+article#main > header h2, 
+#main h2, 
+#main h3, 
+#main h4, 
+#main h5, 
+#main h6 {
     color: #0077B6 !important;
 }
 
-#main p, #main li, #main .inner {
+/* 2. SUBTEXT COLOR - FORCE THE SUBTITLE TO YOUR LIGHT BLUE */
+article#main > header p,
+#main p, 
+#main li, 
+#main .inner {
     color: #E6EEF4 !important;
 }
 
-/* 3. HEADER & NAV (The 'alt' class is what Spectral uses for the transparent look) */
-#header.alt, #header {
+/* 3. SECTION BACKGROUNDS - OVERRIDE THE WHITE "STYLE5" */
+/* 'style5' is the template's class for white sections. We must hit it directly. */
+body, 
+#page-wrapper, 
+#main,
+section.wrapper.style5, 
+.wrapper.style5 .inner {
     background-color: #0A1F2F !important;
-}
-
-#header h1 a, #header nav ul li a {
-    color: #E6EEF4 !important;
+    background-image: none !important;
 }
 
 /* 4. KEEP THE SKY IMAGE */
-/* We ensure the header container is transparent so the image behind it shows */
+/* We target the header and the 'before' overlay to keep the clouds visible */
 article#main > header {
     background-color: transparent !important;
-    background-image: url("images/banner.jpg"); /* Ensure the path is correct if it disappears */
 }
 
-/* This is the dark tint over the clouds. Adjust 0.2 for more/less visibility */
+/* This is the dark 'tint' over the clouds. Adjust 0.3 for more or less visibility */
 article#main > header:before {
-    background-color: rgba(10, 31, 47, 0.2) !important;
+    background-color: rgba(10, 31, 47, 0.3) !important;
+}
+
+/* 5. TOP NAVIGATION BAR */
+#header {
+    background-color: #0A1F2F !important;
+}
+
+#header h1 a, 
+#header .menuToggle {
+    color: #E6EEF4 !important;
 }
 </style>
-
 
 </head>
     <body>
