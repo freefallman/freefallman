@@ -10,49 +10,44 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
  <style>
-/* 1. Keep the sky image but clear the template's default overlays */
-article#main > header {
-    background-color: transparent !important; /* Let the image show through */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-/* 2. Optional: Lighten the overlay if the image is too dark */
-article#main > header:before {
-    background-color: rgba(10, 31, 47, 0.4) !important; /* Your #0A1F2F at 40% opacity */
-}
-
-/* 3. Force your color palette on sections below the sky */
-#main, .wrapper.style5, .inner {
+/* 1. FORCE THE MAIN BACKGROUND */
+/* We target the specific template class 'style5' which is hardcoded as white */
+body, #page-wrapper, .wrapper.style5, #main {
     background-color: #0A1F2F !important;
-    color: #E6EEF4 !important;
 }
 
-/* 4. Force text colors (headings and paragraphs) */
-h1, h2, h3, h4, h5, h6 {
+/* 2. TEXT COLORS */
+/* Targeting IDs specifically to beat the main.css priority */
+#main h2, #main h3, #main h4, #main h5, #main h6 {
     color: #0077B6 !important;
 }
 
-p, li, span {
+#main p, #main li, #main .inner {
     color: #E6EEF4 !important;
 }
 
-/* 5. Navigation & Header Fix */
-#header {
+/* 3. HEADER & NAV (The 'alt' class is what Spectral uses for the transparent look) */
+#header.alt, #header {
     background-color: #0A1F2F !important;
 }
 
-#header h1 a, #header .menuToggle {
+#header h1 a, #header nav ul li a {
     color: #E6EEF4 !important;
 }
 
-/* 6. Fix the "Spectral" default horizontal lines */
-hr {
-    border-bottom-color: #0077B6 !important;
+/* 4. KEEP THE SKY IMAGE */
+/* We ensure the header container is transparent so the image behind it shows */
+article#main > header {
+    background-color: transparent !important;
+    background-image: url("images/banner.jpg"); /* Ensure the path is correct if it disappears */
+}
+
+/* This is the dark tint over the clouds. Adjust 0.2 for more/less visibility */
+article#main > header:before {
+    background-color: rgba(10, 31, 47, 0.2) !important;
 }
 </style>
+
 
 </head>
     <body>
