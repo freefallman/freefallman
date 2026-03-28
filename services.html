@@ -11,69 +11,66 @@
 
     <!-- === YOUR CUSTOM STYLES GO HERE === -->
     <style>
- /* NAV BAR */
+/* NAV BAR - Slimmer & Sleeker */
 #header, #header.alt {
     background-color: #0A1F2F !important;
-    border-bottom: none !important;
+    height: 3.5em; /* Reduced height */
+    line-height: 3.5em; /* Centers text vertically */
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 10000;
 }
 
-#header h1 a, #header nav a, #header .menuToggle span {
-    color: #E6EEF4 !important;
+#header h1 {
+    height: 3.5em;
+    line-height: 3.5em;
+    left: 1.25em;
 }
 
-/* BODY & WRAPPER - Prevent overlap with fixed nav */
+#header nav {
+    right: 1.25em;
+    height: 3.5em;
+    line-height: 3.5em;
+}
+
+/* BODY - Adjusted for the slimmer nav */
 body, #page-wrapper {
     background-color: #0A1F2F !important;
-    padding-top: 4em;   /* Space for the fixed nav bar */
+    padding-top: 3.5em; /* Matches new header height */
 }
 
-/* VID FLYER - Starts right under the menu bar */
+/* HERO IMAGE - Maximum Screen Presence */
 .hero-image {
     margin: 0;
     padding: 0;
     background-color: #0A1F2F;
-    text-align: center;
+    overflow: hidden;
+    line-height: 0; /* Removes tiny gap at bottom of images */
 }
 
 .full-flyer {
     width: 100%;
     height: auto;
-    max-height: calc(100vh - 5.5em);   /* As large as possible while staying above the fold */
+    /* This calculates height based on the viewport minus the header */
+    max-height: calc(100vh - 3.5em); 
     display: block;
     margin: 0 auto;
-    object-fit: contain;               /* Full image, no cropping */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    object-fit: contain; 
 }
 
-/* TEXT SECTION BELOW THE IMAGE */
+/* TEXT SECTION - Clean transitions */
 .wrapper.style5 {
     background-color: #0A1F2F !important;
     color: #E6EEF4 !important;
-    padding: 4em 0 5em 0 !important;
-    margin-top: 0;
-}
-
-.wrapper.style5 .major {
-    text-align: center;
-    margin-bottom: 3em;
+    padding: 3em 0 !important; /* Slightly tighter padding */
 }
 
 .wrapper.style5 .major h2 {
     color: #0077B6 !important;
-    font-size: 3.5rem !important;
+    font-size: 2.5rem !important; /* Scaled down for better hierarchy */
     font-weight: 700;
-    text-transform: none !important;
-}
-
-.wrapper.style5 .major p {
-    color: #E6EEF4 !important;
-    font-size: 1.4rem !important;
-    max-width: 720px;
-    margin: 0 auto;
+    letter-spacing: 0.05em;
 }
 
 /* Content inside the box */
