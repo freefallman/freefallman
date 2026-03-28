@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <html>
- <head>
+<head>
     <title>Services - Freefall Adventures</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -9,93 +9,93 @@
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-/* 1. SKY HERO HEADER - Make it match your index perfectly */
-article#main > header {
-    background-image: url('images/banner.jpg') !important;
-    background-position: center center !important;
-    background-size: cover !important;
-    background-attachment: fixed !important;   /* or scroll if you prefer */
-    background-color: #0A1F2F !important;
-    padding: 10em 0 8em 0 !important;         /* taller hero like most Spectral pages */
-    min-height: 60vh !important;
-}
+    <!-- === YOUR CUSTOM STYLES GO HERE === -->
+    <style>
+    /* 1. SKY HERO HEADER */
+    article#main > header {
+        background-image: url('images/banner.jpg') !important;
+        background-position: center center !important;
+        background-size: cover !important;
+        background-attachment: fixed !important;
+        background-color: #0A1F2F !important;
+        padding: 10em 0 8em 0 !important;
+        min-height: 60vh !important;
+    }
 
-article#main > header:before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(10, 31, 47, 0.55) !important;   /* stronger tint if needed */
-    z-index: 1;
-}
+    article#main > header:before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: rgba(10, 31, 47, 0.55) !important;
+        z-index: 1;
+    }
 
-article#main > header > * {
-    position: relative;
-    z-index: 2;
-}
+    article#main > header > * {
+        position: relative;
+        z-index: 2;
+    }
 
-/* 2. THE WHITE BOX (style5) - This is the main culprit */
-.wrapper.style5,
-section.wrapper.style5,
-#main .wrapper.style5,
-.wrapper.style5 .inner {
-    background-color: #0A1F2F !important;
-    color: #E6EEF4 !important;
-    border-top: none !important;
-}
+    /* 2. WHITE BOX (style5) */
+    .wrapper.style5,
+    section.wrapper.style5,
+    #main .wrapper.style5,
+    .wrapper.style5 .inner {
+        background-color: #0A1F2F !important;
+        color: #E6EEF4 !important;
+        border-top: none !important;
+    }
 
-/* Make sure inner content doesn't fight back */
-.wrapper.style5 .inner {
-    background-color: transparent !important;
-}
+    .wrapper.style5 .inner {
+        background-color: transparent !important;
+    }
 
-/* 3. TEXT COLORS - Stronger targeting for headings */
-h1, h2, h3, h4, h5, h6,
-article#main header h2,
-article#main header p,
-.wrapper.style5 h3,
-.wrapper.style5 h4,
-.wrapper.style5 h2 {
-    color: #0077B6 !important;
-    text-transform: none !important;
-}
+    /* 3. TEXT COLORS */
+    h1, h2, h3, h4, h5, h6,
+    article#main header h2,
+    article#main header p,
+    .wrapper.style5 h2,
+    .wrapper.style5 h3,
+    .wrapper.style5 h4 {
+        color: #0077B6 !important;
+        text-transform: none !important;
+    }
 
-.wrapper.style5 p,
-.wrapper.style5 li,
-.wrapper.style5 .inner p {
-    color: #E6EEF4 !important;
-    opacity: 0.95;
-}
+    .wrapper.style5 p,
+    .wrapper.style5 li,
+    .wrapper.style5 .inner p {
+        color: #E6EEF4 !important;
+        opacity: 0.95;
+    }
 
-/* 4. NAVIGATION BAR */
-#header,
-#header.alt {
-    background-color: #0A1F2F !important;
-    border-bottom: none !important;
-}
+    /* 4. NAVIGATION */
+    #header,
+    #header.alt {
+        background-color: #0A1F2F !important;
+        border-bottom: none !important;
+    }
 
-#header h1 a,
-#header nav a,
-#header .menuToggle span {
-    color: #E6EEF4 !important;
-}
+    #header h1 a,
+    #header nav a,
+    #header .menuToggle span {
+        color: #E6EEF4 !important;
+    }
 
-/* 5. HORIZONTAL RULE */
-hr {
-    border-bottom: solid 1px #0077B6 !important;
-}
+    /* 5. HORIZONTAL RULE */
+    hr {
+        border-bottom: solid 1px #0077B6 !important;
+    }
 
-/* 6. Extra safety for body & page wrapper */
-body, #page-wrapper {
-    background-color: #0A1F2F !important;
-}
+    /* 6. Extra safety */
+    body, #page-wrapper {
+        background-color: #0A1F2F !important;
+    }
 
-/* Optional: Make the Services title bigger and centered like your screenshot */
-article#main > header h2 {
-    font-size: 3.5rem !important;
-    margin-bottom: 0.5em !important;
-}
-
-
+    /* Bigger Services title */
+    article#main > header h2 {
+        font-size: 3.5rem !important;
+        margin-bottom: 0.5em !important;
+    }
+    </style>
 </head>
     <body>
 
