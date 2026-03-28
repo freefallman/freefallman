@@ -1,0 +1,88 @@
+/* FREEFALL ADVENTURES CUSTOM COLORS - Services page */
+:root {
+    --primary-blue: #0077B6;
+    --bright-blue: #00B4FF;
+    --orange: #FF6B00;
+    --dark-navy: #0A1F2F;
+    --footer-navy: #081722;
+    --light-text: #E6EEF4;
+}
+
+/* Force dark theme everywhere */
+body, 
+#page-wrapper, 
+#main, 
+article, 
+.wrapper, 
+.wrapper.style5, 
+.inner,
+#header,
+#header.alt {
+    background-color: var(--dark-navy) !important;
+    color: var(--light-text) !important;
+}
+
+/* Headings and links */
+h1, h2, h3, h4, h5, h6, a, a:hover {
+    color: var(--primary-blue) !important;
+}
+
+/* Buttons */
+.button, .button.primary {
+    background-color: var(--primary-blue) !important;
+    border-color: var(--primary-blue) !important;
+    color: white !important;
+}
+
+.button:hover, .button.primary:hover {
+    background-color: #005f8f !important;
+}
+
+.button.fit.primary, .button.primary.fit {
+    background-color: var(--orange) !important;
+    border-color: var(--orange) !important;
+}
+
+/* Footer */
+#footer {
+    background-color: var(--footer-navy) !important;
+    color: var(--light-text) !important;
+}
+
+#footer .icons a {
+    color: var(--primary-blue) !important;
+}
+
+#footer .icons a:hover {
+    color: var(--bright-blue) !important;
+}
+
+/* MOBILE MENU - Strong overrides */
+#menu {
+    background-color: var(--dark-navy) !important;
+    color: var(--light-text) !important;
+}
+
+#menu ul li a {
+    color: var(--light-text) !important;
+}
+
+#menu ul li a:hover {
+    color: var(--bright-blue) !important;
+    background-color: rgba(0, 180, 255, 0.2) !important;
+}
+
+/* Menu toggle button */
+#header nav ul li.special a.menuToggle {
+    color: var(--primary-blue) !important;
+}
+
+#header nav ul li.special a.menuToggle:hover {
+    color: var(--bright-blue) !important;
+    background: transparent !important;
+}
+
+/* Header branding */
+#header h1 a {
+    color: var(--primary-blue) !important;
+}
