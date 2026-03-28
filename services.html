@@ -9,58 +9,91 @@
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-<style>
-/* 1. SKY HEADER & TINT (Matches your Index) */
+/* 1. SKY HERO HEADER - Make it match your index perfectly */
 article#main > header {
     background-image: url('images/banner.jpg') !important;
     background-position: center center !important;
     background-size: cover !important;
-    background-attachment: scroll !important;
+    background-attachment: fixed !important;   /* or scroll if you prefer */
     background-color: #0A1F2F !important;
-    padding: 8em 0 !important; /* Adjusts height of the sky section */
+    padding: 10em 0 8em 0 !important;         /* taller hero like most Spectral pages */
+    min-height: 60vh !important;
 }
 
 article#main > header:before {
     content: '';
-    background: rgba(10, 31, 47, 0.45) !important; /* This is your Index tint */
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(10, 31, 47, 0.55) !important;   /* stronger tint if needed */
+    z-index: 1;
 }
 
-/* 2. THE "WHITE BOX" FIX (Targets the 'style5' from your screenshot) */
-section.wrapper.style5, 
-.wrapper.style5 .inner,
-#main .wrapper.style5 {
+article#main > header > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* 2. THE WHITE BOX (style5) - This is the main culprit */
+.wrapper.style5,
+section.wrapper.style5,
+#main .wrapper.style5,
+.wrapper.style5 .inner {
     background-color: #0A1F2F !important;
     color: #E6EEF4 !important;
-    border-top: 0 !important;
+    border-top: none !important;
 }
 
-/* 3. TEXT COLORS (Matches Index) */
-h1, h2, h3, h4, h5, h6, 
-article#main > header h2, 
-.wrapper.style5 h3, 
-.wrapper.style5 h4 {
+/* Make sure inner content doesn't fight back */
+.wrapper.style5 .inner {
+    background-color: transparent !important;
+}
+
+/* 3. TEXT COLORS - Stronger targeting for headings */
+h1, h2, h3, h4, h5, h6,
+article#main header h2,
+article#main header p,
+.wrapper.style5 h3,
+.wrapper.style5 h4,
+.wrapper.style5 h2 {
     color: #0077B6 !important;
-    text-transform: none !important; /* Fixes "SERVICES" to "Our Services" */
+    text-transform: none !important;
 }
 
-p, li, .inner {
+.wrapper.style5 p,
+.wrapper.style5 li,
+.wrapper.style5 .inner p {
     color: #E6EEF4 !important;
+    opacity: 0.95;
 }
 
-/* 4. NAVIGATION BAR (Navy background) */
-#header, #header.alt {
+/* 4. NAVIGATION BAR */
+#header,
+#header.alt {
     background-color: #0A1F2F !important;
+    border-bottom: none !important;
 }
 
-#header h1 a, #header .menuToggle {
+#header h1 a,
+#header nav a,
+#header .menuToggle span {
     color: #E6EEF4 !important;
 }
 
-/* 5. HORIZONTAL LINE FIX */
+/* 5. HORIZONTAL RULE */
 hr {
     border-bottom: solid 1px #0077B6 !important;
 }
-</style>
+
+/* 6. Extra safety for body & page wrapper */
+body, #page-wrapper {
+    background-color: #0A1F2F !important;
+}
+
+/* Optional: Make the Services title bigger and centered like your screenshot */
+article#main > header h2 {
+    font-size: 3.5rem !important;
+    margin-bottom: 0.5em !important;
+}
 
 
 </head>
@@ -93,7 +126,7 @@ hr {
             <!-- Main -->
             <article id="main">
                 <header>
-                    <h2>Our ServiceS</h2>
+                    <h2>Our Services</h2>
                     <p>What Freefall Adventures does for you</p>
                 </header>
                 <section class="wrapper style5">
