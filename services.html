@@ -11,39 +11,53 @@
 
     <!-- === YOUR CUSTOM STYLES GO HERE === -->
     <style>
-/* 1. SLIM THE HEADER: Force height and center text */
+/* 1. SLIM THE BAR & CENTER ELEMENTS */
 #header, #header.alt {
-    height: 3em !important;        /* Drastically thinner bar */
-    line-height: 3em !important;   /* Centers the text vertically */
-    min-height: 3em !important;
+    height: 2.5em !important;      /* Even thinner bar */
+    line-height: 2.5em !important; /* Forces vertical centering for the logo */
+    min-height: 2.5em !important;
 }
 
-#header h1, #header nav {
-    height: 3em !important;
-    line-height: 3em !important;
+/* 2. FIX LOGO ALIGNMENT (Freefall Adventures) */
+#header h1 {
+    top: 0 !important;
+    line-height: 2.5em !important;
+}
+
+/* 3. FIX MENU TOGGLE ALIGNMENT (The "Menu" text and Hamburger) */
+#header nav {
+    top: 0 !important;
+    height: 2.5em !important;
+    line-height: 2.5em !important;
+}
+
+#header .menuToggle {
+    height: 2.5em !important;
+    line-height: 2.5em !important;
+    padding: 0 1.5em !important; /* Removes the extra top/bottom space causing the thickness */
     top: 0 !important;
 }
 
-/* 2. REMOVE GAP: Ensure image starts exactly at the bar's edge */
-body, #page-wrapper {
-    padding-top: 3em !important;   /* Match the new header height */
+/* Forces the hamburger icon to center vertically */
+#header .menuToggle:before {
+    height: 2.5em !important;
+    line-height: 2.5em !important;
+    top: 0 !important;
 }
 
-/* 3. BIGGER IMAGE: Fill the viewport width and height */
-.hero-image {
-    width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
+/* 4. ADJUST PAGE WRAPPER & IMAGE */
+body, #page-wrapper {
+    padding-top: 2.5em !important; /* Match the new 2.5em height */
 }
 
 .full-flyer {
     width: 100% !important;
     height: auto !important;
-    /* This forces the image to take up all remaining screen space */
-    max-height: calc(100vh - 3em) !important; 
+    max-height: calc(100vh - 2.5em) !important; 
     display: block !important;
-    object-fit: contain !important; /* Shows the whole image without cropping */
+    object-fit: contain !important;
 }
+
     </style>
 </head>
     <body>
