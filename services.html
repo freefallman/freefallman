@@ -65,7 +65,20 @@ p, li, .wrapper.style5 .inner {
 /* 6. LINK HOVER (Matches Index 15% grow) */
 a { transition: transform 0.3s ease; }
 a:hover { transform: scale(1.15) !important; color: #00B4FF !important; }
+/* This targets the exact nesting Spectral uses for that sky-header text */
+#page-wrapper article#main > header h2 {
+    color: #0077B6 !important;
+    text-transform: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
 
+/* This forces the white section to match your Navy palette */
+#page-wrapper .wrapper.style5, 
+#page-wrapper .wrapper.style5 .inner {
+    background-color: #0A1F2F !important;
+    color: #E6EEF4 !important;
+}
 </style>
 
 </head>
