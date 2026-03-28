@@ -11,38 +11,42 @@
 
     <!-- === YOUR CUSTOM STYLES GO HERE === -->
     <style>
-   /* NAV & OVERALL COLORS */
+ /* NAV BAR */
 #header, #header.alt {
     background-color: #0A1F2F !important;
     border-bottom: none !important;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
 }
 
 #header h1 a, #header nav a, #header .menuToggle span {
     color: #E6EEF4 !important;
 }
 
+/* BODY & WRAPPER - Prevent overlap with fixed nav */
 body, #page-wrapper {
     background-color: #0A1F2F !important;
+    padding-top: 4em;   /* Space for the fixed nav bar */
 }
 
-/* FULL VID FLYER - Large as possible, fully visible, no initial scroll */
+/* VID FLYER - Starts right under the menu bar */
 .hero-image {
     margin: 0;
     padding: 0;
     background-color: #0A1F2F;
     text-align: center;
-    max-height: calc(100vh - 120px);   /* Leaves room for nav + some breathing space */
-    overflow: hidden;
 }
 
 .full-flyer {
     width: 100%;
     height: auto;
-    max-height: calc(100vh - 140px);   /* Makes it as large as possible without forcing scroll */
+    max-height: calc(100vh - 5.5em);   /* As large as possible while staying above the fold */
     display: block;
     margin: 0 auto;
-    object-fit: contain;               /* Shows the whole image without cropping */
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    object-fit: contain;               /* Full image, no cropping */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
 /* TEXT SECTION BELOW THE IMAGE */
@@ -50,6 +54,7 @@ body, #page-wrapper {
     background-color: #0A1F2F !important;
     color: #E6EEF4 !important;
     padding: 4em 0 5em 0 !important;
+    margin-top: 0;
 }
 
 .wrapper.style5 .major {
@@ -71,7 +76,7 @@ body, #page-wrapper {
     margin: 0 auto;
 }
 
-/* Content inside the white/navy box */
+/* Content inside the box */
 .wrapper.style5 h3, .wrapper.style5 h4 {
     color: #0077B6 !important;
 }
