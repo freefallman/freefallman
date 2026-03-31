@@ -1,4 +1,9 @@
 <!DOCTYPE HTML>
+<!--
+    Spectral by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
 <head>
     <title>Services - Freefall Adventures</title>
@@ -9,49 +14,31 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
-        /* Match Home page header exactly */
+        /* Minimal overrides - only what's needed to match Home page */
         #header.alt {
             background-color: #0A1F2F !important;
-            height: 3.5em !important;
-            line-height: 3.5em !important;
-            padding: 0 1.5em !important;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
         }
 
         #header .menuToggle {
             color: #E6EEF4 !important;
-            font-weight: 500;
         }
 
-        /* Make Vid Flyer the main hero - full width, no extra gaps */
+        /* Vid Flyer hero - full width below fixed header */
         .vid-hero-container {
-            margin-top: 3.5em; /* Space for fixed header */
+            margin-top: 0; /* Let the template handle header spacing */
             line-height: 0;
         }
 
         .vid-hero {
             width: 100%;
-            height: auto;
             display: block;
-            max-height: 85vh;
-            object-fit: contain;
         }
 
-        /* Content below the image - dark like Home page */
+        /* Content below image */
         .services-content {
             background-color: #0A1F2F;
             color: #E6EEF4;
             padding: 4em 0 6em 0;
-        }
-
-        .services-content .inner {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 2em;
         }
     </style>
 </head>
@@ -61,7 +48,7 @@
     <!-- Page Wrapper -->
     <div id="page-wrapper">
 
-        <!-- Header - Identical structure to Home page -->
+        <!-- Header - Exact same as your working Home page -->
         <header id="header" class="alt">
             <nav id="nav">
                 <ul>
@@ -81,14 +68,14 @@
             </nav>
         </header>
 
-        <!-- VID FLYER - Loads first as the hero (like the big logo on Home) -->
+        <!-- VID FLYER IMAGE - This is now the main hero -->
         <div class="vid-hero-container">
             <img src="images/Vid_flyer_ET.png" 
                  alt="Freefall Adventures Services Video Flyer" 
                  class="vid-hero">
         </div>
 
-        <!-- Text content below the Vid Flyer image -->
+        <!-- Text content below the image -->
         <section class="services-content">
             <div class="inner">
 
@@ -97,7 +84,6 @@
                     <p style="font-size: 1.3em; color: #B0D4F0;">Tandem Skydiving • AFF Instruction • Video & Photography Packages</p>
                 </header>
 
-                <!-- Add your real service details here -->
                 <h3>Tandem Skydiving</h3>
                 <p>Experience the thrill of freefall with a fully certified instructor. No experience needed.</p>
 
@@ -114,7 +100,7 @@
             </div>
         </section>
 
-        <!-- Footer - Matched to Home page -->
+        <!-- Footer -->
         <footer id="footer" style="background-color: #081722 !important; padding: 60px 0 !important;">
             <ul class="icons" style="margin: 0 0 30px 0 !important; padding: 0; list-style: none; display: flex; justify-content: center; gap: 30px;">
                 <li><a href="#" class="icon brands fa-twitter" style="color: #0077B6 !important; font-size: 1.5em;"><span class="label">Twitter</span></a></li>
@@ -130,7 +116,7 @@
 
     </div>
 
-    <!-- Scripts -->
+    <!-- Scripts - Keep all of them (the menu relies on main.js) -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.scrollex.min.js"></script>
     <script src="assets/js/jquery.scrolly.min.js"></script>
