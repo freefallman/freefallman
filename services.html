@@ -5,210 +5,119 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="custom.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <!-- === YOUR CUSTOM STYLES GO HERE === -->
     <style>
-/* 1. FORCE HEADER HEIGHT & REMOVE PADDING */
-#header, #header.alt {
-    background-color: #0A1F2F !important;
-    height: 3em !important;
-    line-height: 3em !important;
-    min-height: 3em !important;
-    display: flex !important;
-    align-items: center !important;
-    padding: 0 1em !important;
-}
+        /* Force consistent dark header like Home page */
+        #header.alt {
+            background-color: #0A1F2F !important;
+            height: 3.5em !important;
+            line-height: 3.5em !important;
+            padding: 0 1.5em !important;
+        }
 
-/* 2. ALIGN "FREEFALL ADVENTURES" LOGO */
-#header h1 {
-    height: 3em !important;
-    line-height: 3em !important;
-    top: 0 !important;
-    margin: 0 !important;
-    flex-grow: 1;
-}
+        #header .menuToggle {
+            color: #E6EEF4 !important;
+        }
 
-#header h1 a {
-    display: block;
-    height: 3em;
-    line-height: 3em;
-}
+        /* Make the Vid Flyer the main hero image */
+        .vid-hero {
+            width: 100%;
+            height: auto;
+            display: block;
+            max-height: 85vh;
+            object-fit: contain;
+        }
 
-/* 3. ALIGN "MENU" AND HAMBURGER ICON */
-#header nav {
-    top: 0 !important;
-    right: 0 !important;
-    height: 3em !important;
-    display: flex !important;
-    align-items: center !important;
-}
-
-#header .menuToggle {
-    display: flex !important;
-    align-items: center !important; /* Centers Word and Icon together */
-    height: 3em !important;
-    line-height: 3em !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    border: 0 !important;
-    position: relative;
-}
-
-/* 4. FIX HAMBURGER ICON ALIGNMENT */
-#header .menuToggle:before {
-    position: static !important; /* Removes theme's absolute placement */
-    height: 3em !important;
-    line-height: 3em !important;
-    margin-left: 0.75em !important; /* Space between word and icon */
-    display: inline-block !important;
-    vertical-align: middle !important;
-}
-
-/* 5. REMOVE TOP GAP & FIX IMAGE SIZE */
-body, #page-wrapper {
-    padding-top: 3em !important; /* Matches header height */
-}
-
-.hero-image {
-    line-height: 0; /* Removes bottom ghost margin */
-}
-
-.full-flyer {
-    width: 100% !important;
-    height: auto !important;
-    max-height: calc(100vh - 3em) !important;
-    display: block !important;
-    object-fit: contain !important;
-}
-
-
-/* 6. STYLE THE TEXT SECTION BELOW */
-.wrapper.style5 {
-    background-color: #0A1F2F !important;
-    padding: 3em 0 !important;
-}
+        /* Text section below the image */
+        .services-content {
+            background-color: #0A1F2F;
+            color: #E6EEF4;
+            padding: 4em 0;
+        }
     </style>
 </head>
-    <body>
 
-        <!-- Page Wrapper -->
-        <div id="page-wrapper">
+<body class="landing is-preload">
 
-         <!-- Header -->
-<header id="header" class="alt">
-    <nav id="nav">
-        <ul>
-            <li class="special">
-                <a href="#menu" class="menuToggle"><span>Menu</span></a>
-                <div id="menu">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="SafetyInfoCreds.html">Safety Info & Credentials</a></li>
-                        <li><a href="#">Sign Up</a></li>
-                        <li><a href="#">Log In</a></li>
-                    </ul>
-                </div>
-            </li>
-        </ul>
-    </nav>
-</header>
+    <!-- Page Wrapper -->
+    <div id="page-wrapper">
 
-<!-- Header stays the same (you already added it) -->
-
-<!-- Hero Banner with Vid Flyer Image -->
-<section id="banner" style="
-    background-image: url('images/vid-flyer.jpg');   /* ← Change this if your image has a different filename */
-    background-position: center center;
-    background-size: cover;
-    background-attachment: scroll;
-    min-height: 85vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-">
-    <!-- Dark overlay for better text readability -->
-    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(10, 31, 47, 0.55);"></div>
-
-    <div class="inner" style="position: relative; z-index: 2; text-align: center; color: white; padding: 0 20px;">
-        <h1 style="font-size: 3.2em; margin: 0 0 20px 0; text-shadow: 0 2px 10px rgba(0,0,0,0.6);">Our Services</h1>
-        <p style="font-size: 1.5em; max-width: 900px; margin: 0 auto; line-height: 1.4;">
-            Tandem Skydiving • AFF Instruction • Video & Photography • Gear Rental & More
-        </p>
-    </div>
-</section>
-
-<!-- Services Content Section (text appears BELOW the big image) -->
-<section id="one" class="wrapper style1 special">
-    <div class="inner">
-        <!-- Put all your service descriptions, cards, prices, etc. here -->
-        <h2 style="text-align: center; margin-bottom: 40px;">What We Offer</h2>
-        
-        <!-- Example layout - replace with your actual content -->
-        <div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: center;">
-            <!-- Your service blocks go here -->
-        </div>
-    </div>
-</section>
-            <!-- Main -->
-       <article id="main">
-
-    <!-- VID FLYER - Starts right under the nav bar -->
-    <header class="hero-image">
-        <img src="images/Vid_flyer_ET.png" 
-             alt="Freefall Adventures Services" 
-             class="full-flyer">
-    </header>
-
-    <!-- Text content below the image -->
-    <section class="wrapper style5">
-        <div class="inner">
-
-            <header class="major">
-                <h2>OUR SERVICES</h2>
-                <p></p>
-            </header>
-
-            <h3>Text place holder</h3>
-            <p>Text to come</p>
-
-            <hr />
-
-            <h4>Text placeholder</h4>
-            <p>Text to come</p>
-
-        </div>
-    </section>
-
-</article>
-            <!-- Footer - Updated to match index -->
-            <footer id="footer" style="background-color: #081722 !important; padding: 60px 0 !important;">
-                <ul class="icons" style="margin: 0 0 30px 0 !important; padding: 0; list-style: none; display: flex; justify-content: center; gap: 30px;">
-                    <li><a href="#" class="icon brands fa-twitter" style="color: #0077B6 !important; font-size: 1.5em;"><span class="label">Twitter</span></a></li>
-                    <li><a href="#" class="icon brands fa-facebook-f" style="color: #0077B6 !important; font-size: 1.5em;"><span class="label">Facebook</span></a></li>
-                    <li><a href="#" class="icon brands fa-instagram" style="color: #0077B6 !important; font-size: 1.5em;"><span class="label">Instagram</span></a></li>
-                    <li><a href="#" class="icon solid fa-envelope" style="color: #0077B6 !important; font-size: 1.5em;"><span class="label">Email</span></a></li>
+        <!-- Header - Same as Home page -->
+        <header id="header" class="alt">
+            <nav id="nav">
+                <ul>
+                    <li class="special">
+                        <a href="#menu" class="menuToggle"><span>Menu</span></a>
+                        <div id="menu">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="SafetyInfoCreds.html">Safety Info & Credentials</a></li>
+                                <li><a href="#">Sign Up</a></li>
+                                <li><a href="#">Log In</a></li>
+                            </ul>
+                        </div>
+                    </li>
                 </ul>
-                <ul class="copyright" style="color: rgba(255,255,255,0.4);">
-                    <li>&copy; 2026 FREEFALL ADVENTURES</li>
-                    <li>Design: <a href="http://html5up.net" style="color: rgba(255,255,255,0.4) !important;">HTML5 UP</a></li>
-                </ul>
-            </footer>
+            </nav>
+        </header>
 
-        </div>
+        <!-- VID FLYER - This is now the first thing users see -->
+        <header style="margin: 0; padding: 0; line-height: 0;">
+            <img src="images/Vid_flyer_ET.png" 
+                 alt="Freefall Adventures Services" 
+                 class="vid-hero">
+        </header>
 
-        <!-- Scripts -->
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/jquery.scrollex.min.js"></script>
-        <script src="assets/js/jquery.scrolly.min.js"></script>
-        <script src="assets/js/browser.min.js"></script>
-        <script src="assets/js/breakpoints.min.js"></script>
-        <script src="assets/js/util.js"></script>
-        <script src="assets/js/main.js"></script>
+        <!-- Text content BELOW the Vid Flyer image -->
+        <section class="services-content">
+            <div class="inner">
+                <header class="major" style="text-align: center;">
+                    <h2>Our Services</h2>
+                </header>
 
-    </body>
+                <h3>Tandem Skydiving</h3>
+                <p>Text placeholder - Add your tandem description here...</p>
+
+                <hr />
+
+                <h3>AFF Instruction</h3>
+                <p>Text placeholder - Add your Accelerated Freefall details here...</p>
+
+                <hr />
+
+                <h3>Video & Photography</h3>
+                <p>Text placeholder - Details about video flyer packages...</p>
+
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer" style="background-color: #081722 !important; padding: 60px 0 !important;">
+            <ul class="icons" style="margin: 0 0 30px 0 !important; padding: 0; list-style: none; display: flex; justify-content: center; gap: 30px;">
+                <li><a href="#" class="icon brands fa-twitter" style="color: #0077B6 !important; font-size: 1.5em;"><span class="label">Twitter</span></a></li>
+                <li><a href="#" class="icon brands fa-facebook-f" style="color: #0077B6 !important; font-size: 1.5em;"><span class="label">Facebook</span></a></li>
+                <li><a href="#" class="icon brands fa-instagram" style="color: #0077B6 !important; font-size: 1.5em;"><span class="label">Instagram</span></a></li>
+                <li><a href="#" class="icon solid fa-envelope" style="color: #0077B6 !important; font-size: 1.5em;"><span class="label">Email</span></a></li>
+            </ul>
+            <ul class="copyright" style="color: rgba(255,255,255,0.4);">
+                <li>&copy; 2026 FREEFALL ADVENTURES</li>
+                <li>Design: <a href="http://html5up.net" style="color: rgba(255,255,255,0.4) !important;">HTML5 UP</a></li>
+            </ul>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
 </html>
