@@ -1,92 +1,174 @@
 <!DOCTYPE HTML>
 <!--
-	Spectral by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+    Spectral by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>Services</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<head>
+    <title>Services - Freefall Adventures</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+    <style>
+        /* ============================================= */
+        /* FREEFALL ADVENTURES - COLOR & HOVER FIXES     */
+        /* ============================================= */
 
-				<!-- Header -->
-					<header id="header">
-						<h1><a href="index.html">Spectral</a></h1>
-						<nav id="nav">
-							<ul>
-								<li class="special">
-									<a href="#menu" class="menuToggle"><span>Menu</span></a>
-									<div id="menu">
-										<ul>
-											<li><a href="index.html">Home</a></li>
-											<li><a href="services.html">Services</a></li>
-											<li><a href="elements.html">Elements</a></li>
-											<li><a href="#">Sign Up</a></li>
-											<li><a href="#">Log In</a></li>
-										</ul>
-									</div>
-								</li>
-							</ul>
-						</nav>
-					</header>
+        a, a:hover, 
+        h1, h2, h3, h4, h5, h6,
+        .spotlight .content h2,
+        .major h2,
+        #header nav ul li a,
+        #header nav ul li a:hover {
+            color: #0077B6 !important;
+        }
 
-				<!-- Main -->
-					<article id="main">
-						<header>
-							<h2>Services</h2>
-							<p>What Freefall Adventures does for you</p>
-						</header>
-						<section class="wrapper style5">
-							<div class="inner">
+        /* Dark Navy Backgrounds */
+        #header,
+        #header.alt,
+        body.landing #page-wrapper {
+            background-color: #0A1F2F !important;
+        }
 
-								<h3>Lorem ipsum dolor</h3>
-								<p>Morbi mattis mi consectetur tortor elementum, varius pellentesque velit convallis. Aenean tincidunt lectus auctor mauris maximus, ac scelerisque ipsum tempor. Duis vulputate ex et ex tincidunt, quis lacinia velit aliquet. Duis non efficitur nisi, id malesuada justo. Maecenas sagittis felis ac sagittis semper. Curabitur purus leo, tempus sed finibus eget, fringilla quis risus. Maecenas et lorem quis sem varius sagittis et a est. Maecenas iaculis iaculis sem. Donec vel dolor at arcu tincidunt bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce ut aliquet justo. Donec id neque ipsum. Integer eget ultricies odio. Nam vel ex a orci fringilla tincidunt. Aliquam eleifend ligula non velit accumsan cursus. Etiam ut gravida sapien.</p>
+        /* GENERAL LINK HOVER ENLARGE (15%) */
+        a {
+            transition: transform 0.3s ease;
+        }
 
-								<p>Vestibulum ultrices risus velit, sit amet blandit massa auctor sit amet. Sed eu lectus sem. Phasellus in odio at ipsum porttitor mollis id vel diam. Praesent sit amet posuere risus, eu faucibus lectus. Vivamus ex ligula, tempus pulvinar ipsum in, auctor porta quam. Proin nec dui cursus, posuere dui eget interdum. Fusce lectus magna, sagittis at facilisis vitae, pellentesque at etiam. Quisque posuere leo quis sem commodo, vel scelerisque nisi scelerisque. Suspendisse id quam vel tortor tincidunt suscipit. Nullam auctor orci eu dolor consectetur, interdum ullamcorper ante tincidunt. Mauris felis nec felis elementum varius.</p>
+        a:hover {
+            transform: scale(1.15) !important;
+        }
 
-								<hr />
+        /* HAMBURGER MENU - BETTER READABILITY */
+        #menu {
+            background-color: #0A1F2F !important;
+            color: #E6EEF4 !important;
+        }
 
-								<h4>Feugiat aliquam</h4>
-								<p>Nam sapien ante, varius in pulvinar vitae, rhoncus id massa. Donec varius ex in mauris ornare, eget euismod urna egestas. Etiam lacinia tempor ipsum, sodales porttitor justo. Aliquam dolor quam, semper in tortor eu, volutpat efficitur quam. Fusce nec fermentum nisl. Aenean erat diam, tempus aliquet erat.</p>
+        #menu ul li a {
+            color: #E6EEF4 !important;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
 
-								<p>Etiam iaculis nulla ipsum, et pharetra libero rhoncus ut. Phasellus rutrum cursus velit, eget condimentum nunc blandit vel. In at pulvinar lectus. Morbi diam ante, vulputate et imperdiet eget, fermentum non dolor. Ut eleifend sagittis tincidunt. Sed viverra commodo mi, ac rhoncus justo. Duis neque ligula, elementum ut enim vel, posuere finibus justo. Vivamus facilisis maximus nibh quis pulvinar. Quisque hendrerit in ipsum id tellus facilisis fermentum. Proin mauris dui, at vestibulum sit amet, auctor bibendum neque.</p>
+        #menu ul li a:hover {
+            color: #00B4FF !important;
+            background-color: rgba(0, 180, 255, 0.15) !important;
+            border-radius: 4px;
+            transform: scale(1.05);
+            padding: 8px 16px;
+        }
 
-							</div>
-						</section>
-					</article>
+        /* FIX MENU BUTTON (MENU word) HOVER - NO BLUE BOX */
+        #header nav ul li.special a.menuToggle:hover,
+        #header nav ul li.special a.menuToggle:active,
+        #header nav ul li.special a.menuToggle:focus {
+            background-color: transparent !important;
+        }
 
-				<!-- Footer -->
-					<footer id="footer">
-						<ul class="icons">
-							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-						</ul>
-						<ul class="copyright">
-							<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-						</ul>
-					</footer>
+        #header nav ul li.special a.menuToggle:hover::before {
+            background-color: transparent !important;
+            display: none !important;
+        }
 
-			</div>
+        #header nav ul li.special a.menuToggle:hover {
+            color: #00B4FF !important;
+        }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+        /* Content area below Vid Flyer */
+        .services-content {
+            background-color: #0A1F2F;
+            color: #E6EEF4;
+            padding: 4em 0 6em 0;
+        }
+    </style>
+</head>
 
-	</body>
+<body class="landing is-preload">
+
+    <!-- Page Wrapper -->
+    <div id="page-wrapper">
+
+        <!-- Header - Same as Home -->
+        <header id="header" class="alt">
+            <nav id="nav">
+                <ul>
+                    <li class="special">
+                        <a href="#menu" class="menuToggle"><span>Menu</span></a>
+                        <div id="menu">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="SafetyInfoCreds.html">Safety Info & Credentials</a></li>
+                                <li><a href="#">Sign Up</a></li>
+                                <li><a href="#">Log In</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- VID FLYER IMAGE -->
+        <div style="line-height: 0;">
+            <img src="images/Vid_flyer_ET.png" 
+                 alt="Freefall Adventures Services Video Flyer" 
+                 style="width: 100%; display: block;">
+        </div>
+
+        <!-- Text content below the image -->
+        <section class="services-content">
+            <div class="inner">
+
+                <header class="major" style="text-align: center; margin-bottom: 2em;">
+                    <h2>Our Services</h2>
+                    <p style="font-size: 1.3em; color: #B0D4F0;">Tandem Skydiving • AFF Instruction • Video & Photography Packages</p>
+                </header>
+
+                <h3>Tandem Skydiving</h3>
+                <p>Experience the thrill of freefall with a fully certified instructor. No experience needed.</p>
+
+                <hr style="border-color: rgba(255,255,255,0.15);">
+
+                <h3>AFF (Accelerated Freefall) Instruction</h3>
+                <p>Learn to skydive solo with our professional coaching program.</p>
+
+                <hr style="border-color: rgba(255,255,255,0.15);">
+
+                <h3>Video & Photography</h3>
+                <p>Professional in-air video and stills so you can relive your jump forever.</p>
+
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer" style="background-color: #081722 !important; padding: 60px 0 !important;">
+            <ul class="icons" style="margin: 0 0 30px 0 !important; padding: 0; list-style: none; display: flex; justify-content: center; gap: 30px;">
+                <li><a href="#" class="icon brands fa-twitter" style="color: #0077B6 !important; font-size: 1.5em;"><span class="label">Twitter</span></a></li>
+                <li><a href="#" class="icon brands fa-facebook-f" style="color: #0077B6 !important; font-size: 1.5em;"><span class="label">Facebook</span></a></li>
+                <li><a href="#" class="icon brands fa-instagram" style="color: #0077B6 !important; font-size: 1.5em;"><span class="label">Instagram</span></a></li>
+                <li><a href="#" class="icon solid fa-envelope" style="color: #0077B6 !important; font-size: 1.5em;"><span class="label">Email</span></a></li>
+            </ul>
+            <ul class="copyright" style="color: rgba(255,255,255,0.4); text-align: center;">
+                <li>&copy; 2026 FREEFALL ADVENTURES</li>
+                <li>Design: <a href="http://html5up.net" style="color: rgba(255,255,255,0.4) !important;">HTML5 UP</a></li>
+            </ul>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
 </html>
