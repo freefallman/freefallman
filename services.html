@@ -9,19 +9,30 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
-        /* Force consistent dark header like Home page */
+        /* Match Home page header exactly */
         #header.alt {
             background-color: #0A1F2F !important;
             height: 3.5em !important;
             line-height: 3.5em !important;
             padding: 0 1.5em !important;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
         }
 
         #header .menuToggle {
             color: #E6EEF4 !important;
+            font-weight: 500;
         }
 
-        /* Make the Vid Flyer the main hero image */
+        /* Make Vid Flyer the main hero - full width, no extra gaps */
+        .vid-hero-container {
+            margin-top: 3.5em; /* Space for fixed header */
+            line-height: 0;
+        }
+
         .vid-hero {
             width: 100%;
             height: auto;
@@ -30,11 +41,17 @@
             object-fit: contain;
         }
 
-        /* Text section below the image */
+        /* Content below the image - dark like Home page */
         .services-content {
             background-color: #0A1F2F;
             color: #E6EEF4;
-            padding: 4em 0;
+            padding: 4em 0 6em 0;
+        }
+
+        .services-content .inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2em;
         }
     </style>
 </head>
@@ -44,7 +61,7 @@
     <!-- Page Wrapper -->
     <div id="page-wrapper">
 
-        <!-- Header - Same as Home page -->
+        <!-- Header - Identical structure to Home page -->
         <header id="header" class="alt">
             <nav id="nav">
                 <ul>
@@ -64,37 +81,40 @@
             </nav>
         </header>
 
-        <!-- VID FLYER - This is now the first thing users see -->
-        <header style="margin: 0; padding: 0; line-height: 0;">
+        <!-- VID FLYER - Loads first as the hero (like the big logo on Home) -->
+        <div class="vid-hero-container">
             <img src="images/Vid_flyer_ET.png" 
-                 alt="Freefall Adventures Services" 
+                 alt="Freefall Adventures Services Video Flyer" 
                  class="vid-hero">
-        </header>
+        </div>
 
-        <!-- Text content BELOW the Vid Flyer image -->
+        <!-- Text content below the Vid Flyer image -->
         <section class="services-content">
             <div class="inner">
-                <header class="major" style="text-align: center;">
+
+                <header class="major" style="text-align: center; margin-bottom: 2em;">
                     <h2>Our Services</h2>
+                    <p style="font-size: 1.3em; color: #B0D4F0;">Tandem Skydiving • AFF Instruction • Video & Photography Packages</p>
                 </header>
 
+                <!-- Add your real service details here -->
                 <h3>Tandem Skydiving</h3>
-                <p>Text placeholder - Add your tandem description here...</p>
+                <p>Experience the thrill of freefall with a fully certified instructor. No experience needed.</p>
 
-                <hr />
+                <hr style="border-color: rgba(255,255,255,0.15);">
 
-                <h3>AFF Instruction</h3>
-                <p>Text placeholder - Add your Accelerated Freefall details here...</p>
+                <h3>AFF (Accelerated Freefall) Instruction</h3>
+                <p>Learn to skydive solo with our professional coaching program.</p>
 
-                <hr />
+                <hr style="border-color: rgba(255,255,255,0.15);">
 
                 <h3>Video & Photography</h3>
-                <p>Text placeholder - Details about video flyer packages...</p>
+                <p>Professional in-air video and stills so you can relive your jump forever.</p>
 
             </div>
         </section>
 
-        <!-- Footer -->
+        <!-- Footer - Matched to Home page -->
         <footer id="footer" style="background-color: #081722 !important; padding: 60px 0 !important;">
             <ul class="icons" style="margin: 0 0 30px 0 !important; padding: 0; list-style: none; display: flex; justify-content: center; gap: 30px;">
                 <li><a href="#" class="icon brands fa-twitter" style="color: #0077B6 !important; font-size: 1.5em;"><span class="label">Twitter</span></a></li>
@@ -102,7 +122,7 @@
                 <li><a href="#" class="icon brands fa-instagram" style="color: #0077B6 !important; font-size: 1.5em;"><span class="label">Instagram</span></a></li>
                 <li><a href="#" class="icon solid fa-envelope" style="color: #0077B6 !important; font-size: 1.5em;"><span class="label">Email</span></a></li>
             </ul>
-            <ul class="copyright" style="color: rgba(255,255,255,0.4);">
+            <ul class="copyright" style="color: rgba(255,255,255,0.4); text-align: center;">
                 <li>&copy; 2026 FREEFALL ADVENTURES</li>
                 <li>Design: <a href="http://html5up.net" style="color: rgba(255,255,255,0.4) !important;">HTML5 UP</a></li>
             </ul>
