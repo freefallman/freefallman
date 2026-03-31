@@ -14,27 +14,72 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
-        /* Minimal overrides - only what's needed to match Home page */
-        #header.alt {
+        /* ============================================= */
+        /* FREEFALL ADVENTURES - COLOR & HOVER FIXES     */
+        /* ============================================= */
+
+        a, a:hover, 
+        h1, h2, h3, h4, h5, h6,
+        .spotlight .content h2,
+        .major h2,
+        #header nav ul li a,
+        #header nav ul li a:hover {
+            color: #0077B6 !important;
+        }
+
+        /* Dark Navy Backgrounds */
+        #header,
+        #header.alt,
+        body.landing #page-wrapper {
             background-color: #0A1F2F !important;
         }
 
-        #header .menuToggle {
+        /* GENERAL LINK HOVER ENLARGE (15%) */
+        a {
+            transition: transform 0.3s ease;
+        }
+
+        a:hover {
+            transform: scale(1.15) !important;
+        }
+
+        /* HAMBURGER MENU - BETTER READABILITY */
+        #menu {
+            background-color: #0A1F2F !important;
             color: #E6EEF4 !important;
         }
 
-        /* Vid Flyer hero - full width below fixed header */
-        .vid-hero-container {
-            margin-top: 0; /* Let the template handle header spacing */
-            line-height: 0;
+        #menu ul li a {
+            color: #E6EEF4 !important;
+            font-weight: 500;
+            transition: all 0.3s ease;
         }
 
-        .vid-hero {
-            width: 100%;
-            display: block;
+        #menu ul li a:hover {
+            color: #00B4FF !important;
+            background-color: rgba(0, 180, 255, 0.15) !important;
+            border-radius: 4px;
+            transform: scale(1.05);
+            padding: 8px 16px;
         }
 
-        /* Content below image */
+        /* FIX MENU BUTTON (MENU word) HOVER - NO BLUE BOX */
+        #header nav ul li.special a.menuToggle:hover,
+        #header nav ul li.special a.menuToggle:active,
+        #header nav ul li.special a.menuToggle:focus {
+            background-color: transparent !important;
+        }
+
+        #header nav ul li.special a.menuToggle:hover::before {
+            background-color: transparent !important;
+            display: none !important;
+        }
+
+        #header nav ul li.special a.menuToggle:hover {
+            color: #00B4FF !important;
+        }
+
+        /* Content area below Vid Flyer */
         .services-content {
             background-color: #0A1F2F;
             color: #E6EEF4;
@@ -48,7 +93,7 @@
     <!-- Page Wrapper -->
     <div id="page-wrapper">
 
-        <!-- Header - Exact same as your working Home page -->
+        <!-- Header - Same as Home -->
         <header id="header" class="alt">
             <nav id="nav">
                 <ul>
@@ -68,11 +113,11 @@
             </nav>
         </header>
 
-        <!-- VID FLYER IMAGE - This is now the main hero -->
-        <div class="vid-hero-container">
+        <!-- VID FLYER IMAGE -->
+        <div style="line-height: 0;">
             <img src="images/Vid_flyer_ET.png" 
                  alt="Freefall Adventures Services Video Flyer" 
-                 class="vid-hero">
+                 style="width: 100%; display: block;">
         </div>
 
         <!-- Text content below the image -->
@@ -116,7 +161,7 @@
 
     </div>
 
-    <!-- Scripts - Keep all of them (the menu relies on main.js) -->
+    <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.scrollex.min.js"></script>
     <script src="assets/js/jquery.scrolly.min.js"></script>
