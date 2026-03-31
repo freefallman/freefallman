@@ -117,24 +117,43 @@ body, #page-wrapper {
     </nav>
 </header>
 
- <!-- Banner / Hero Section -->
+<!-- Header stays the same (you already added it) -->
+
+<!-- Hero Banner with Vid Flyer Image -->
 <section id="banner" style="
-    background-image: url('images/skydive-banner.jpg');  /* Change to your skydiving photo if you want */
+    background-image: url('images/vid-flyer.jpg');   /* ← Change this if your image has a different filename */
     background-position: center center;
     background-size: cover;
     background-attachment: scroll;
-    min-height: 60vh;
+    min-height: 85vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 ">
-    <div class="inner" style="text-align: center; color: white;">
-        <h1 style="font-size: 3em; margin-bottom: 20px;">Our Services</h1>
-        <p style="font-size: 1.4em; max-width: 800px; margin: 0 auto;">
-            Tandem Skydiving • AFF Instruction • Training & More
+    <!-- Dark overlay for better text readability -->
+    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(10, 31, 47, 0.55);"></div>
+
+    <div class="inner" style="position: relative; z-index: 2; text-align: center; color: white; padding: 0 20px;">
+        <h1 style="font-size: 3.2em; margin: 0 0 20px 0; text-shadow: 0 2px 10px rgba(0,0,0,0.6);">Our Services</h1>
+        <p style="font-size: 1.5em; max-width: 900px; margin: 0 auto; line-height: 1.4;">
+            Tandem Skydiving • AFF Instruction • Video & Photography • Gear Rental & More
         </p>
     </div>
-</section>           
+</section>
+
+<!-- Services Content Section (text appears BELOW the big image) -->
+<section id="one" class="wrapper style1 special">
+    <div class="inner">
+        <!-- Put all your service descriptions, cards, prices, etc. here -->
+        <h2 style="text-align: center; margin-bottom: 40px;">What We Offer</h2>
+        
+        <!-- Example layout - replace with your actual content -->
+        <div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: center;">
+            <!-- Your service blocks go here -->
+        </div>
+    </div>
+</section>
             <!-- Main -->
        <article id="main">
 
