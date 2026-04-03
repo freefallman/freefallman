@@ -67,27 +67,16 @@
             background-color: transparent !important;
         }
 
-               /* Content area */
+        /* Content area */
         .safety-content {
             background-color: #0A1F2F;
             color: #E6EEF4;
-            padding: 0 0 6em 0;     /* reduced top padding */
+            padding: 4em 0 6em 0;
         }
 
         .expand-content,
         .faq-answer {
             display: none;
-        }
-
-        /* ============================================= */
-        /* VERTICALLY CENTER THE MAIN TITLE              */
-        /* ============================================= */
-        .safety-intro {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 40vh;
-            padding: 2em 0;
         }
 
         .highlight-box {
@@ -105,21 +94,9 @@
             transition: transform 0.3s ease;
         }
 
-              .image-fit-enhanced:hover {
+        .image-fit-enhanced:hover {
             transform: scale(1.03);
         }
-
-       /* ============================================= */
-/* VERTICALLY CENTER THE MAIN TITLE - IMPROVED   */
-/* ============================================= */
-.safety-intro {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 25vh;           /* Reduced from 35vh */
-    padding: 3em 0 4em 0;       /* More natural spacing */
-    margin-bottom: 2em;
-}
     </style>
 </head>
 
@@ -147,25 +124,22 @@
             </nav>
         </header>
 
-      <!-- Replace your current banner + header section with this updated code -->
-
         <!-- Banner -->
-        <div style="line-height: 0; overflow: hidden; max-height: 80vh;">
-            <img src="images/finaltouchdown.png" 
+        <div style="line-height: 0; position: relative; overflow: hidden; max-height: 80vh;">
+            <img src="images/touchdownagain.jpg" 
                  alt="Freefall Adventures Safety Banner" 
                  style="width: 100%; height: auto; display: block; object-fit: cover;">
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(10, 31, 47, 0.4);"></div>
         </div>
 
-                <!-- Main Content -->
+        <!-- Main Content -->
         <section class="safety-content">
             <div class="inner">
 
-                <!-- Vertically Centered Title -->
-                <div class="safety-intro">
-                    <header class="major" style="text-align: center;">
-                        <h2 style="font-size: 2.25em; margin: 0;">Safety Information &amp; Credentials</h2>
-                    </header>
-                </div>
+                <header class="major" style="text-align: center; margin-bottom: 2em;">
+                    <h2 style="font-size: 2.25em; margin: 0;">Safety Information &amp; Credentials</h2>
+                    <p style="color: #E6EEF4; font-size: 1.3em;">Your safety is our #1 priority at Freefall Adventures</p>
+                </header>
 
                 <!-- Is Skydiving Safe? - Data-Driven Section -->
                 <div style="display: flex; align-items: flex-start; gap: 3em; flex-wrap: wrap; margin-bottom: 5em;">
@@ -249,23 +223,13 @@
 
                 <!-- Frequently Asked Questions -->
                 <div style="display: flex; align-items: flex-start; gap: 3em; flex-wrap: wrap; margin-bottom: 4em;">
-<!-- Image Side -->
-<div style="flex: 1; min-width: 320px; text-align: center;">
-    <a href="https://youtu.be/IeHfYq5qEbk?si=JBzd51iL2D96gdkO" 
-       target="_blank" 
-       rel="noopener noreferrer">
-        <span class="image fit image-fit-enhanced">
-            <img src="images/RamAir.jpg" 
-                 alt="Ram-Air Parachute Explanation" 
-                 style="display: block; width: 100%;">
-        </span>
-    </a>
-    
-    <!-- Optional: Add a helpful caption below like you did for CYPRES -->
-    <p style="margin-top: 0.8em; font-size: 0.95em; color: #00B4FF;">
-        Click the image to watch how ram-air parachutes work →
-    </p>
-</div>
+
+                    <!-- Image Side -->
+                    <div style="flex: 1; min-width: 320px; text-align: center;">
+                        <span class="image fit image-fit-enhanced">
+                            <img src="images/RamAir.jpg" alt="Certified Tandem Instructors" style="display: block; width: 100%;">
+                        </span>
+                    </div>
 
                     <!-- FAQ Content -->
                     <div style="flex: 1; min-width: 320px;">
@@ -346,7 +310,7 @@
                         <div class="highlight-box" style="margin-top: 2.5em;">
                             <h4 style="margin-top: 0;">Community Spotlight: The Standard of Excellence with Howy “Freefall” Hensen</h4>
                             <p>In the world of skydiving, safety isn’t just about high-tech gadgets—it’s about the culture created by the people who lead the sport. Few people embody this transition from "daredevil hobby" to "disciplined aviation sport" better than Howy “Freefall” Hensen.</p>
-                            <p>When you jump with a veteran like Howy, you aren't just relying on a parachute; you are relying on thousands of successful deployments, rigorous gear maintenance that meets the highest FAA standards, and the mentorship of a coach who has trained the next generation of safety-conscious skydivers.</p>
+                            <p>When you jump with a veteran like Howy, you aren't just relying on a parachute; you are relying on thousands of successful deployments, rigorous gear maintenance that meets the highest FAA standards, and the mentorship of a coach who has trained the next generation of safety-conscious flyers.</p>
                         </div>
                     </div>
                 </div>
