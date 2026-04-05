@@ -218,6 +218,26 @@ a img:hover {
     background-color: rgba(0, 180, 255, 0.05) !important;
     transform: scale(1.05) !important;
 }
+/* ============================================= */
+/* MOBILE FIX - STOP HORIZONTAL SCROLL           */
+/* ============================================= */
+
+@media (max-width: 736px) {
+    html, body, #page-wrapper, #banner, #banner .inner {
+        overflow-x: hidden !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Force the schedule button to fit perfectly on phones */
+    .button.primary[href*="skydivemilwaukee.com"] {
+        width: 90% !important;
+        max-width: 380px !important;
+        margin: 30px auto !important;
+        padding: 18px 30px !important;
+        font-size: 1.2em !important;
+    }
+}
 
 </style>	
 	</head>
