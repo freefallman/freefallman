@@ -24,15 +24,18 @@
         .major h2,
         #header nav ul li a,
         #header nav ul li a:hover {
-            color: #0077B6 !important;
+            color: #14a5f3 !important;
         }
 
-        /* Dark Navy Backgrounds */
+/* Dark Navy Backgrounds */
         #header,
         #header.alt,
         body.landing #page-wrapper {
             background-color: #0A1F2F !important;
         }
+body.landing #page-wrapper {
+    background-color: rgba(10, 31, 47, 0.01) !important;   /* ← THIS IS THE LINE YOU CHANGE */
+}
 
         a {
             transition: transform 0.3s ease;
@@ -132,12 +135,12 @@
         </div>
 
         <!-- Vertically Centered Title Section -->
-        <section style="background-color: #0A1F2F; 
-                        padding: 4em 0; 
-                        display: flex; 
-                        align-items: center; 
-                        justify-content: center; 
-                        min-height: 220px;">
+       <section style="background-color: #0A1F2F; 
+                padding: 4em 0; 
+                display: flex; 
+                align-items: center; 
+                justify-content: center; 
+                min-height: 220px;">
             <div style="text-align: center;">
                 <h1 style="font-size: 2.9em; 
                            margin: 0; 
