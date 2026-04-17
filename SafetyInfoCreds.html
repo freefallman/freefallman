@@ -18,24 +18,46 @@
         /* FREEFALL ADVENTURES - COLOR & HOVER FIXES     */
         /* ============================================= */
 
-        a, a:hover, 
+        /* All main text changed to dark navy #0A1F2F */
         h1, h2, h3, h4, h5, h6,
-        .spotlight .content h2,
-        .major h2,
-        #header nav ul li a,
-        #header nav ul li a:hover {
-            color: #14a5f3 !important;
+        p, strong, li,
+        .expand-content,
+        .faq-answer {
+            color: #0A1F2F !important;
         }
 
-/* Dark Navy Backgrounds */
+        /* Links stay blue for visibility */
+        a, a:hover, 
+        #header nav ul li a,
+        #header nav ul li a:hover {
+            color: #0077B6 !important;
+        }
+
+        /* Dark Navy — Header & Title Bar ONLY */
         #header,
         #header.alt,
-        body.landing #page-wrapper {
+        section[style*="background-color: #0A1F2F"] {
             background-color: #0A1F2F !important;
         }
-body.landing #page-wrapper {
-    background-color: rgba(10, 31, 47, 0.01) !important;   /* ← THIS IS THE LINE YOU CHANGE */
-}
+
+        /* YOUR SKY BACKGROUND — banner.jpg */
+        body.landing #page-wrapper {
+            background-color: transparent !important;
+            background-image: url("images/banner.jpg") !important;
+            background-size: cover !important;
+            background-position: center center !important;
+            background-attachment: fixed !important;
+            background-repeat: no-repeat !important;
+        }
+
+        /* Remove any dark overlays from the template */
+        body.landing::before,
+        #page-wrapper::before,
+        body.landing #page-wrapper::before {
+            content: none !important;
+            background: transparent !important;
+            opacity: 0 !important;
+        }
 
         a {
             transition: transform 0.3s ease;
@@ -48,7 +70,6 @@ body.landing #page-wrapper {
         /* HAMBURGER MENU */
         #menu {
             background-color: #0A1F2F !important;
-            color: #E6EEF4 !important;
         }
 
         #menu ul li a {
@@ -73,7 +94,7 @@ body.landing #page-wrapper {
         /* Content area */
         .safety-content {
             background-color: #0A1F2F;
-            color: #E6EEF4;
+            color: #0A1F2F;
             padding: 4em 0 6em 0;
         }
 
@@ -127,14 +148,14 @@ body.landing #page-wrapper {
             </nav>
         </header>
 
-              <!-- Banner (overlay removed) -->
+        <!-- Banner -->
         <div style="line-height: 0; position: relative; overflow: hidden; max-height: 80vh;">
             <img src="images/finaltouchdown.png" 
                  alt="Freefall Adventures Safety Banner" 
                  style="width: 100%; height: auto; display: block; object-fit: cover;">
         </div>
 
-        <!-- Vertically Centered Title Section -->
+        <!-- Title Section -->
        <section style="background-color: #0A1F2F; 
                 padding: 4em 0; 
                 display: flex; 
@@ -152,233 +173,237 @@ body.landing #page-wrapper {
             </div>
         </section>
 
-        <!-- Horizontal Line -->
         <hr style="border-color: rgba(255,255,255,0.15); margin: 0;">
 
-                <!-- Is Skydiving Safe? - Data-Driven Section -->
-                <div style="display: flex; align-items: flex-start; gap: 3em; flex-wrap: wrap; margin-bottom: 5em;">
+        <!-- Is Skydiving Safe? Section -->
+        <div style="display: flex; align-items: flex-start; gap: 3em; flex-wrap: wrap; margin-bottom: 5em;">
+            <div style="flex: 1; min-width: 320px;">
+                <h2 style="color: #0A1F2F !important; margin-bottom: 0.4em;">Is Skydiving Safe?</h2>
+                <p style="font-size: 1.12em; line-height: 1.65; margin-bottom: 2.5em;">
+                    So you’re thinking about jumping out of a plane, but is it safe? While nothing in the world is totally without risk, 
+                    the short answer is <strong>YES</strong>, skydiving is safe! Looking at the most current data, skydiving in the 2020s 
+                    is safer than it has ever been in human history.
+                </p>
 
-                    <!-- Left: Content -->
-                    <div style="flex: 1; min-width: 320px;">
-                        
-                        <h2 style="color: #14a5f3 !important; margin-bottom: 0.4em;">Is Skydiving Safe?</h2>
-                        
-                        <p style="font-size: 1.12em; line-height: 1.65; margin-bottom: 2.5em;">
-                            So you’re thinking about jumping out of a plane, but is it safe? While nothing in the world is totally without risk, 
-                            the short answer is <strong>YES</strong>, skydiving is safe! Looking at the most current data, skydiving in the 2020s 
-                            is safer than it has ever been in human history.
-                        </p>
-
-                        <!-- Clickable Sections -->
-                        <div style="margin-bottom: 2.2em;" onclick="this.querySelector('.expand-content').style.display = (this.querySelector('.expand-content').style.display === 'block') ? 'none' : 'block';">
-                            <div style="font-weight: 600; color: #E6EEF4; cursor: pointer; padding: 1em 0; border-bottom: 1px solid rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: space-between;">
-                                The Record-Breaking Reality
-                                <span style="font-size: 1.4em; transition: transform 0.3s;">›</span>
-                            </div>
-                            <div class="expand-content" style="padding: 1.2em 0; color: #c0d4e6; line-height: 1.65;">
-                                In 1961, the risk was real: there were <strong>11.12 fatalities for every 100,000 jumps</strong>.<br><br>
-                                Fast forward to 2024, and the sport reached a historic milestone with a record low of 
-                                <strong>0.23 fatalities per 100,000</strong>.<br><br>
-                                To put that in perspective: you are statistically more likely to be struck by lightning or choke on your lunch 
-                                than to have a fatal skydiving accident.
-                            </div>
-                        </div>
-
-                        <div style="margin-bottom: 2.2em;" onclick="this.querySelector('.expand-content').style.display = (this.querySelector('.expand-content').style.display === 'block') ? 'none' : 'block';">
-                            <div style="font-weight: 600; color: #E6EEF4; cursor: pointer; padding: 1em 0; border-bottom: 1px solid rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: space-between;">
-                                Why the Sport Is Getting Safer
-                                <span style="font-size: 1.4em; transition: transform 0.3s;">›</span>
-                            </div>
-                            <div class="expand-content" style="padding: 1.2em 0; color: #c0d4e6; line-height: 1.65;">
-                                The dramatic drop in risk isn't luck—it's engineering and education. Let’s get into it!<br><br>
-
-                                <strong>MODERN SKYDIVING GEAR:</strong><br>
-                                <strong>The AAD</strong> — Modern rigs are equipped with an Automatic Activation Device (AAD). This micro-computer measures your altitude and speed; if you’re still falling too fast and your altitude is too low, it automatically opens your reserve parachute for you.<br><br>
-
-                                <strong>Modern Parachutes</strong> — Parachutes have evolved from round, uncontrollable "military-style" chutes to soft landing, highly maneuverable square wings.
-                            </div>
-                        </div>
-
-                        <div onclick="this.querySelector('.expand-content').style.display = (this.querySelector('.expand-content').style.display === 'block') ? 'none' : 'block';">
-                            <div style="font-weight: 600; color: #E6EEF4; cursor: pointer; padding: 1em 0; border-bottom: 1px solid rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: space-between;">
-                                TRAINING – Tandem Skydiving
-                                <span style="font-size: 1.4em; transition: transform 0.3s;">›</span>
-                            </div>
-                            <div class="expand-content" style="padding: 1.2em 0; color: #c0d4e6; line-height: 1.65;">
-                                <strong>Tandem skydiving is the safest way</strong> to make your first jump. Tandem skydiving has the lowest injury rate 
-                                of any type of jumping, with many years seeing <strong>zero tandem fatalities worldwide</strong>!
-                            </div>
-                        </div>
-
-                                                <!-- Bottom Line Highlight -->
-                        <div class="highlight-box">
-                            <h4 style="margin-top: 0; color: #14a5f3 !important;">THE BOTTOM LINE</h4>
-                            <p style="margin-bottom: 0; font-size: 1.08em; line-height: 1.6;">
-                                Skydiving has evolved from a "daredevil" stunt into a highly regulated, technology-driven aviation sport. 
-                                While no extreme activity is without risk, the numbers show that the "danger" of skydiving is largely a myth of the past.
-                            </p>
-                        </div>
+                <div style="margin-bottom: 2.2em;" onclick="this.querySelector('.expand-content').style.display = (this.querySelector('.expand-content').style.display === 'block') ? 'none' : 'block';">
+                    <div style="font-weight: 600; color: #0A1F2F; cursor: pointer; padding: 1em 0; border-bottom: 1px solid rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: space-between;">
+                        The Record-Breaking Reality
+                        <span style="font-size: 1.4em; transition: transform 0.3s;">›</span>
                     </div>
-
-                    <!-- Right: Clickable Cypress 2 Image -->
-                    <div style="flex: 1; min-width: 320px; text-align: center; position: sticky; top: 2em;">
-                        <a href="https://www.cypres.aero/the-story-of-cypres-2026/" target="_blank" rel="noopener noreferrer">
-                            <span class="image fit image-fit-enhanced">
-                                <img src="images/cypress2.jpg" alt="CYPRES 2 Automatic Activation Device" style="display: block; width: 100%;">
-                            </span>
-                        </a>
-                        
+                    <div class="expand-content" style="padding: 1.2em 0; color: #0A1F2F; line-height: 1.65;">
+                        In 1961, the risk was real: there were <strong>11.12 fatalities for every 100,000 jumps</strong>.<br><br>
+                        Fast forward to 2024, and the sport reached a historic milestone with a record low of 
+                        <strong>0.23 fatalities per 100,000</strong>.<br><br>
+                        To put that in perspective: you are statistically more likely to be struck by lightning or choke on your lunch 
+                        than to have a fatal skydiving accident.
                     </div>
                 </div>
 
-                <hr style="border-color: rgba(255,255,255,0.15);">
-
-                <!-- Frequently Asked Questions -->
-                <div style="display: flex; align-items: flex-start; gap: 3em; flex-wrap: wrap; margin-bottom: 4em;">
-
-                                        <!-- Image Side - Now Clickable -->
-                    <div style="flex: 1; min-width: 320px; text-align: center;">
-                        <a href="https://youtu.be/IeHfYq5qEbk?si=xexf-GlsE-JHRpTO" 
-                           target="_blank" 
-                           rel="noopener noreferrer">
-                            <span class="image fit image-fit-enhanced">
-                                <img src="images/RamAir.jpg" 
-                                     alt="Certified Tandem Instructors - Watch Video" 
-                                     style="display: block; width: 100%;">
-                            </span>
-                        </a>
+                <div style="margin-bottom: 2.2em;" onclick="this.querySelector('.expand-content').style.display = (this.querySelector('.expand-content').style.display === 'block') ? 'none' : 'block';">
+                    <div style="font-weight: 600; color: #0A1F2F; cursor: pointer; padding: 1em 0; border-bottom: 1px solid rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: space-between;">
+                        Why the Sport Is Getting Safer
+                        <span style="font-size: 1.4em; transition: transform 0.3s;">›</span>
                     </div>
+                    <div class="expand-content" style="padding: 1.2em 0; color: #0A1F2F; line-height: 1.65;">
+                        The dramatic drop in risk isn't luck—it's engineering and education. Let’s get into it!<br><br>
 
-                    <!-- FAQ Content -->
-                    <div style="flex: 1; min-width: 320px;">
-                        <h3 style="color: #14a5f3 !important; margin-bottom: 1.5em;">Frequently Asked Questions</h3>
+                        <strong>MODERN SKYDIVING GEAR:</strong><br>
+                        <strong>The AAD</strong> — Modern rigs are equipped with an Automatic Activation Device (AAD). This micro-computer measures your altitude and speed; if you’re still falling too fast and your altitude is too low, it automatically opens your reserve parachute for you.<br><br>
 
-                        <!-- FAQ 1 -->
-                        <div style="margin-bottom: 2em;" onclick="this.querySelector('.faq-answer').style.display = (this.querySelector('.faq-answer').style.display === 'block') ? 'none' : 'block';">
-                            <div style="font-weight: 600; color: #E6EEF4; cursor: pointer; padding: 0.8em 0; border-bottom: 1px solid rgba(255,255,255,0.2);">
-                                Is skydiving safer than driving?
-                            </div>
-                            <div class="faq-answer" style="padding: 1em 0; color: #c0d4e6; line-height: 1.6;">
-                                Statistically, yes. According to the National Safety Council, the odds of dying in a motor vehicle crash are about 1 in 93 over a lifetime. In contrast, the 2024 skydiving fatality rate was roughly 1 in 435,000 jumps. You are statistically safer under a parachute than you are behind the wheel on your way to the dropzone.
-                            </div>
-                        </div>
-
-                        <!-- FAQ 2 -->
-                        <div style="margin-bottom: 2em;" onclick="this.querySelector('.faq-answer').style.display = (this.querySelector('.faq-answer').style.display === 'block') ? 'none' : 'block';">
-                            <div style="font-weight: 600; color: #E6EEF4; cursor: pointer; padding: 0.8em 0; border-bottom: 1px solid rgba(255,255,255,0.2);">
-                                What happens if the parachute doesn't open?
-                            </div>
-                            <div class="faq-answer" style="padding: 1em 0; color: #c0d4e6; line-height: 1.6;">
-                                Every skydiver carries two parachutes: a main and a reserve. If the main canopy has an issue, the jumper performs a "cut-away" and deploys the reserve. Reserve parachutes are packed only by FAA-certified riggers and are designed for extreme reliability.
-                            </div>
-                        </div>
-
-                        <!-- FAQ 3 -->
-                        <div style="margin-bottom: 2em;" onclick="this.querySelector('.faq-answer').style.display = (this.querySelector('.faq-answer').style.display === 'block') ? 'none' : 'block';">
-                            <div style="font-weight: 600; color: #E6EEF4; cursor: pointer; padding: 0.8em 0; border-bottom: 1px solid rgba(255,255,255,0.2);">
-                                What if I pass out or forget to pull the cord?
-                            </div>
-                            <div class="faq-answer" style="padding: 1em 0; color: #c0d4e6; line-height: 1.6;">
-                                Modern tandem and student skydiving rigs are all equipped with an AAD (Automatic Activation Device). This is a small computer that monitors your altitude and speed. If you are still in freefall at a dangerously low altitude, the AAD automatically fires a cutter to release your reserve parachute for you.
-                            </div>
-                        </div>
-
-                        <!-- FAQ 4 -->
-                        <div style="margin-bottom: 2em;" onclick="this.querySelector('.faq-answer').style.display = (this.querySelector('.faq-answer').style.display === 'block') ? 'none' : 'block';">
-                            <div style="font-weight: 600; color: #E6EEF4; cursor: pointer; padding: 0.8em 0; border-bottom: 1px solid rgba(255,255,255,0.2);">
-                                How often do parachutes fail?
-                            </div>
-                            <div class="faq-answer" style="padding: 1em 0; color: #c0d4e6; line-height: 1.6;">
-                                Total equipment failure is incredibly rare. Approximately 99% of skydiving accidents are attributed to "human error"—such as making a mistake during a high-speed landing or failing to follow safety protocols—rather than the gear itself failing.
-                            </div>
-                        </div>
-
-                        <!-- FAQ 5 -->
-                        <div onclick="this.querySelector('.faq-answer').style.display = (this.querySelector('.faq-answer').style.display === 'block') ? 'none' : 'block';">
-                            <div style="font-weight: 600; color: #E6EEF4; cursor: pointer; padding: 0.8em 0; border-bottom: 1px solid rgba(255,255,255,0.2);">
-                                Is tandem skydiving safer than jumping solo?
-                            </div>
-                            <div class="faq-answer" style="padding: 1em 0; color: #c0d4e6; line-height: 1.6;">
-                                Yes. Tandem skydiving (where you are harnessed to an instructor) has the highest safety rating in the sport. Before a skydiver can become a tandem Instructor they must have at least 500 jumps and 3 years in the sport before they can even begin training for their tandem instructor rating. The equipment used for tandems is specifically over-engineered for maximum safety.
-                            </div>
-                        </div>
+                        <strong>Modern Parachutes</strong> — Parachutes have evolved from round, uncontrollable "military-style" chutes to soft landing, highly maneuverable square wings.
                     </div>
                 </div>
 
-                <hr style="border-color: rgba(255,255,255,0.15); margin-bottom: 4em;">
-
-                <!-- Who is Howy Hensen -->
-                <div style="display: flex; align-items: flex-start; gap: 3em; flex-wrap: wrap; margin-bottom: 5em;">
-
-                    <div style="flex: 1; min-width: 320px; text-align: center;">
-                        <span class="image fit image-fit-enhanced">
-                            <img src="images/howyRock.jpg" alt="Howy Hensen - Freefall Adventures" style="display: block; width: 100%;">
-                        </span>
+                <div onclick="this.querySelector('.expand-content').style.display = (this.querySelector('.expand-content').style.display === 'block') ? 'none' : 'block';">
+                    <div style="font-weight: 600; color: #0A1F2F; cursor: pointer; padding: 1em 0; border-bottom: 1px solid rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: space-between;">
+                        TRAINING – Tandem Skydiving
+                        <span style="font-size: 1.4em; transition: transform 0.3s;">›</span>
                     </div>
-
-                    <div style="flex: 1; min-width: 320px;">
-                        <h3 style="color: #14a5f3 !important;">Who is Howy Hensen?</h3>
-                        <p>Howy Hensen is a veteran skydiver and instructor with over <strong>35 years and 6,000 jumps</strong>. Howy comes from a competitive skydiving background. He played a foundational role in organized competitive skydiving in the Illinois and Wisconsin area in the 1990’s. He completed his competitive career by participating in a 300 person skydiving formation in 2002. This was a world record at the time. </p>
-                        <p>The Midwest Skydiving League (MWSL): Howy was the first director of the MWSL (formerly the Illinois Skydiving League) starting in the late 1990s.</p>
-                        <p>Competitive Career: He was a formation skydiving competitor who competed for 5 years at the USPA Nationals, medaling 1 time each in the 4-way FS intermediate class and advanced class. He also medaled 1 time in the intermediate 8-way FS class.
-                            He completed his competitive skydiving career in 2002 by participating in a 300 person skydiving formation. This was a world record at the time.
-                        </p>
-                        <p>Professional Background: Outside of the skydiving world, he has been involved in the fitness industry as a personal trainer and a CrossFit gym owner. He also worked for 22 years as a firefighter in the city of Milwaukee.</p>
-
-                                                <div class="highlight-box" style="margin-top: 2.5em;">
-                            <h4 style="margin-top: 0; color: #14a5f3 !important;">Community Spotlight: The Standard of Excellence with Howy “Freefall” Hensen</h4>
-                            <p>In the world of skydiving, safety isn’t just about high-tech gadgets—it’s about the culture created by the people who lead the sport. Few people embody this transition from "daredevil hobby" to "disciplined aviation sport" better than Howy “Freefall” Hensen.</p>
-                            <p>When you jump with a veteran like Howy, you aren't just relying on a parachute; you are relying on thousands of successful deployments, rigorous gear maintenance that meets the highest FAA standards, and the mentorship of a coach who has trained the next generation of safety-conscious flyers.</p>
-                        </div>
+                    <div class="expand-content" style="padding: 1.2em 0; color: #0A1F2F; line-height: 1.65;">
+                        <strong>Tandem skydiving is the safest way</strong> to make your first jump. Tandem skydiving has the lowest injury rate 
+                        of any type of jumping, with many years seeing <strong>zero tandem fatalities worldwide</strong>!
                     </div>
                 </div>
 
-                <hr style="border-color: rgba(255,255,255,0.15);">
-
-                <!-- Equipment & Procedures -->
-                <div style="display: flex; align-items: center; gap: 2em; flex-wrap: wrap;">
-                    <div style="flex: 1; min-width: 300px;">
-                        <h3 style="color: #14a5f3 !important;">Equipment &amp; Procedures</h3>
-                        <p>We use only the highest-quality rigs, canopies, and reserve parachutes. Every student receives a full safety briefing, harness fitting, and exit training before boarding the aircraft.</p>
-                        <table class="alt" style="width:100%;">
-                            <thead>
-                                <tr>
-                                    <th>Item</th>
-                                    <th>Standard</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td>Tandem Rig</td><td>Student + Instructor dual system</td></tr>
-                                <tr><td>Reserve Parachute</td><td>Cypres 2 AAD (automatic activation)</td></tr>
-                                <tr><td>Helmet &amp; Altimeter</td><td>Standard on every jump</td></tr>
-                                <tr><td>Video/Photo</td><td>Optional professional capture</td></tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div style="flex: 1; min-width: 300px;">
-                        <h3 style="color: #14a5f3 !important;">Questions?</h3>
-                        <p>Still have concerns? Our veteran instructors are happy to answer any question before you jump. Feel free to reach out!</p>
-                        <a href="https://www.skydivemilwaukee.com/" class="button primary">262-642-9494</a>
-                    </div>
+                <div class="highlight-box">
+                    <h4 style="margin-top: 0; color: #0A1F2F !important;">THE BOTTOM LINE</h4>
+                    <p style="margin-bottom: 0; font-size: 1.08em; line-height: 1.6;">
+                        Skydiving has evolved from a "daredevil" stunt into a highly regulated, technology-driven aviation sport. 
+                        While no extreme activity is without risk, the numbers show that the "danger" of skydiving is largely a myth of the past.
+                    </p>
                 </div>
-
             </div>
-        </section>
 
-        <!-- Footer -->
-        <footer id="footer" style="background-color: #081722 !important; padding: 60px 0 !important;">
-            <ul class="icons" style="margin: 0 0 30px 0 !important; padding: 0; list-style: none; display: flex; justify-content: center; gap: 30px; width: 100%;">
-                <li><a href="https://x.com/CCcrossfitman" class="icon brands fa-x-twitter" style="color: #0077B6 !important; font-size: 1.5em;"><span class="label">X</span></a></li>
-                <li><a href="https://www.facebook.com/freefallman.howy" class="icon brands fa-facebook-f" style="color: #0077B6 !important; font-size: 1.5em;"><span class="label">Facebook</span></a></li>
-                <li><a href="mailto:freefallman@yahoo.com" class="icon solid fa-envelope" style="color: #0077B6 !important; font-size: 1.5em;"><span class="label">Email</span></a></li>
-            </ul>
-            <ul class="copyright" style="color: rgba(255,255,255,0.4); text-align: center;">
-                <li>&copy; 2026 FREEFALL ADVENTURES</li>
-                <li>Design: <a href="http://html5up.net" style="color: rgba(255,255,255,0.4) !important;">HTML5 UP</a></li>
-            </ul>
-        </footer>
+            <!-- Right: Cypress Image -->
+            <div style="flex: 1; min-width: 320px; text-align: center; position: sticky; top: 2em;">
+                <a href="https://www.cypres.aero/the-story-of-cypres-2026/" target="_blank" rel="noopener noreferrer">
+                    <span class="image fit image-fit-enhanced">
+                        <img src="images/cypress2.jpg" alt="CYPRES 2 Automatic Activation Device" style="display: block; width: 100%;">
+                    </span>
+                </a>
+            </div>
+        </div>
+
+        <hr style="border-color: rgba(255,255,255,0.15);">
+
+        <!-- Frequently Asked Questions -->
+        <div style="display: flex; align-items: flex-start; gap: 3em; flex-wrap: wrap; margin-bottom: 4em;">
+            <!-- Image Side -->
+            <div style="flex: 1; min-width: 320px; text-align: center;">
+                <a href="https://youtu.be/IeHfYq5qEbk?si=xexf-GlsE-JHRpTO" target="_blank" rel="noopener noreferrer">
+                    <span class="image fit image-fit-enhanced">
+                        <img src="images/RamAir.jpg" alt="Certified Tandem Instructors - Watch Video" style="display: block; width: 100%;">
+                    </span>
+                </a>
+            </div>
+
+            <!-- FAQ Content -->
+            <div style="flex: 1; min-width: 320px;">
+                <h3 style="color: #0A1F2F !important; margin-bottom: 1.5em;">Frequently Asked Questions</h3>
+
+                <!-- FAQ 1 -->
+                <div style="margin-bottom: 2em;" onclick="this.querySelector('.faq-answer').style.display = (this.querySelector('.faq-answer').style.display === 'block') ? 'none' : 'block';">
+                    <div style="font-weight: 600; color: #0A1F2F; cursor: pointer; padding: 0.8em 0; border-bottom: 1px solid rgba(255,255,255,0.2);">
+                        Is skydiving safer than driving?
+                    </div>
+                    <div class="faq-answer" style="padding: 1em 0; color: #0A1F2F; line-height: 1.6;">
+                        Statistically, yes. According to the National Safety Council, the odds of dying in a motor vehicle crash are about 1 in 93 over a lifetime. In contrast, the 2024 skydiving fatality rate was roughly 1 in 435,000 jumps. You are statistically safer under a parachute than you are behind the wheel on your way to the dropzone.
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div style="margin-bottom: 2em;" onclick="this.querySelector('.faq-answer').style.display = (this.querySelector('.faq-answer').style.display === 'block') ? 'none' : 'block';">
+                    <div style="font-weight: 600; color: #0A1F2F; cursor: pointer; padding: 0.8em 0; border-bottom: 1px solid rgba(255,255,255,0.2);">
+                        What happens if the parachute doesn't open?
+                    </div>
+                    <div class="faq-answer" style="padding: 1em 0; color: #0A1F2F; line-height: 1.6;">
+                        Every skydiver carries two parachutes: a main and a reserve. If the main canopy has an issue, the jumper performs a "cut-away" and deploys the reserve. Reserve parachutes are packed only by FAA-certified riggers and are designed for extreme reliability.
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div style="margin-bottom: 2em;" onclick="this.querySelector('.faq-answer').style.display = (this.querySelector('.faq-answer').style.display === 'block') ? 'none' : 'block';">
+                    <div style="font-weight: 600; color: #0A1F2F; cursor: pointer; padding: 0.8em 0; border-bottom: 1px solid rgba(255,255,255,0.2);">
+                        What if I pass out or forget to pull the cord?
+                    </div>
+                    <div class="faq-answer" style="padding: 1em 0; color: #0A1F2F; line-height: 1.6;">
+                        Modern tandem and student skydiving rigs are all equipped with an AAD (Automatic Activation Device). This is a small computer that monitors your altitude and speed. If you are still in freefall at a dangerously low altitude, the AAD automatically fires a cutter to release your reserve parachute for you.
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div style="margin-bottom: 2em;" onclick="this.querySelector('.faq-answer').style.display = (this.querySelector('.faq-answer').style.display === 'block') ? 'none' : 'block';">
+                    <div style="font-weight: 600; color: #0A1F2F; cursor: pointer; padding: 0.8em 0; border-bottom: 1px solid rgba(255,255,255,0.2);">
+                        How often do parachutes fail?
+                    </div>
+                    <div class="faq-answer" style="padding: 1em 0; color: #0A1F2F; line-height: 1.6;">
+                        Total equipment failure is incredibly rare. Approximately 99% of skydiving accidents are attributed to "human error"—such as making a mistake during a high-speed landing or failing to follow safety protocols—rather than the gear itself failing.
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div onclick="this.querySelector('.faq-answer').style.display = (this.querySelector('.faq-answer').style.display === 'block') ? 'none' : 'block';">
+                    <div style="font-weight: 600; color: #0A1F2F; cursor: pointer; padding: 0.8em 0; border-bottom: 1px solid rgba(255,255,255,0.2);">
+                        Is tandem skydiving safer than jumping solo?
+                    </div>
+                    <div class="faq-answer" style="padding: 1em 0; color: #0A1F2F; line-height: 1.6;">
+                        Yes. Tandem skydiving (where you are harnessed to an instructor) has the highest safety rating in the sport. Before a skydiver can become a tandem Instructor they must have at least 500 jumps and 3 years in the sport before they can even begin training for their tandem instructor rating. The equipment used for tandems is specifically over-engineered for maximum safety.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr style="border-color: rgba(255,255,255,0.15); margin-bottom: 4em;">
+
+        <!-- Who is Howy Hensen -->
+        <div style="display: flex; align-items: flex-start; gap: 3em; flex-wrap: wrap; margin-bottom: 5em;">
+            <!-- Left: Bio Text -->
+            <div style="flex: 1; min-width: 320px;">
+                <h3 style="color: #0A1F2F !important;">Howy's Bio</h3>
+                <p>Howy Hensen is a veteran skydiver and instructor with over <strong>35 years and 6,000 jumps</strong>. Howy comes from a competitive skydiving background. He played a foundational role in organized competitive skydiving in the Illinois and Wisconsin area in the 1990’s. He completed his competitive career by participating in a 300 person skydiving formation in 2002. This was a world record at the time. </p>
+                <p>The Midwest Skydiving League (MWSL): Howy was the first director of the MWSL (formerly the Illinois Skydiving League) starting in the late 1990s.</p>
+                <p>Competitive Career: He was a formation skydiving competitor who competed for 5 years at the USPA Nationals, medaling 1 time each in the 4-way FS intermediate class and advanced class. He also medaled 1 time in the intermediate 8-way FS class.
+                    He completed his competitive skydiving career in 2002 by participating in a 300 person skydiving formation. This was a world record at the time.
+                </p>
+                <p>Professional Background: Outside of the skydiving world, he has been involved in the fitness industry as a personal trainer and a CrossFit gym owner. He also worked for 22 years as a firefighter in the city of Milwaukee.</p>
+            </div>
+
+                        <!-- Right: Photo + Spotlight -->
+            <div style="flex: 1; min-width: 320px; text-align: center;">
+                <a href="https://youtu.be/fj371yu-Seg?si=dYTylq6b9wFYrrLu" 
+                   target="_blank" 
+                   rel="noopener noreferrer">
+                    <span class="image fit image-fit-enhanced">
+                        <img src="images/howyRock.jpg" 
+                             alt="Howy Hensen - Freefall Adventures" 
+                             style="display: block; width: 100%;">
+                    </span>
+                </a>
+
+                <div class="highlight-box" style="margin-top: 2.5em; text-align: left;">
+                    <h4 style="margin-top: 0; color: #0A1F2F !important;">Community Spotlight: The Standard of Excellence with Howy “Freefall” Hensen</h4>
+                    <p>In the world of skydiving, safety isn’t just about high-tech gadgets—it’s about the culture created by the people who lead the sport. Few people embody this transition from "daredevil hobby" to "disciplined aviation sport" better than Howy “Freefall” Hensen.</p>
+                    <p>When you jump with a veteran like Howy, you aren't just relying on a parachute; you are relying on thousands of successful deployments, rigorous gear maintenance that meets the highest FAA standards, and the mentorship of a coach who has trained the next generation of safety-conscious flyers.</p>
+                </div>
+            </div>
+        </div>
+
+        <hr style="border-color: rgba(255,255,255,0.15);">
+
+                        <!-- Equipment & Procedures -->
+        <div style="display: flex; align-items: center; gap: 2em; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 300px;">
+                <h3 style="color: #0A1F2F !important;">Equipment &amp; Procedures</h3>
+                <p>We use only the highest-quality rigs, canopies, and reserve parachutes. Every student receives a full safety briefing, harness fitting, and exit training before boarding the aircraft.</p>
+                
+                <table class="alt" style="width:100%; color: #0A1F2F !important; border-color: #0A1F2F !important;">
+                    <thead>
+                        <tr>
+                            <th style="color: #0A1F2F !important; border-color: #0A1F2F !important;">Item</th>
+                            <th style="color: #0A1F2F !important; border-color: #0A1F2F !important;">Standard</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-color: #0A1F2F !important;">
+                            <td style="border-color: #0A1F2F !important;">Tandem Rig</td>
+                            <td style="border-color: #0A1F2F !important;">Student + Instructor dual system</td>
+                        </tr>
+                        <tr style="border-color: #0A1F2F !important;">
+                            <td style="border-color: #0A1F2F !important;">Reserve Parachute</td>
+                            <td style="border-color: #0A1F2F !important;">Cypres 2 AAD (automatic activation)</td>
+                        </tr>
+                        <tr style="border-color: #0A1F2F !important;">
+                            <td style="border-color: #0A1F2F !important;">Helmet &amp; Altimeter</td>
+                            <td style="border-color: #0A1F2F !important;">Standard on every jump (for AFF/Students)</td>
+                        </tr>
+                        <tr style="border-color: #0A1F2F !important;">
+                            <td style="border-color: #0A1F2F !important;">Video/Photo</td>
+                            <td style="border-color: #0A1F2F !important;">Optional professional capture</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div style="flex: 1; min-width: 300px;">
+                <h3 style="color: #0A1F2F !important;">Questions?</h3>
+                <p>Still have concerns? Our veteran instructors are happy to answer any question before you jump. Feel free to reach out!</p>
+                <a href="https://www.skydivemilwaukee.com/" class="button primary">262-642-9494</a>
+            </div>
+        </div>
 
     </div>
+
+    <!-- Footer -->
+    <footer id="footer" style="background-color: #081722 !important; padding: 60px 0 !important;">
+        <ul class="icons" style="margin: 0 0 30px 0 !important; padding: 0; list-style: none; display: flex; justify-content: center; gap: 30px; width: 100%;">
+            <li><a href="https://x.com/CCcrossfitman" class="icon brands fa-x-twitter" style="color: #0077B6 !important; font-size: 1.5em;"><span class="label">X</span></a></li>
+            <li><a href="https://www.facebook.com/freefallman.howy" class="icon brands fa-facebook-f" style="color: #0077B6 !important; font-size: 1.5em;"><span class="label">Facebook</span></a></li>
+            <li><a href="mailto:freefallman@yahoo.com" class="icon solid fa-envelope" style="color: #0077B6 !important; font-size: 1.5em;"><span class="label">Email</span></a></li>
+        </ul>
+        <ul class="copyright" style="color: rgba(255,255,255,0.4); text-align: center;">
+            <li>&copy; 2026 FREEFALL ADVENTURES</li>
+            <li>Design: <a href="http://html5up.net" style="color: rgba(255,255,255,0.4) !important;">HTML5 UP</a></li>
+        </ul>
+    </footer>
 
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
