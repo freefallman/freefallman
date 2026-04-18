@@ -85,6 +85,17 @@
             color: #E6EEF4;
             padding: 4em 0 6em 0;
         }
+        /* ============================================= */
+/* MOBILE-ONLY FIX FOR VALERIE BANNER            */
+/* ============================================= */
+
+@media (max-width: 736px) {
+    /* Make the top banner taller on phones only */
+    div[style*="overflow: hidden"] img {
+        max-height: 88vh !important;
+        object-position: center top !important;
+    }
+}
     </style>
 </head>
 
@@ -113,8 +124,8 @@
             </nav>
         </header>
 
-                               <!-- MAIN SERVICES HEADER IMAGE -->
-        <div style="line-height: 0; position: relative; overflow: hidden; max-height: 75vh;">
+                              <!-- MAIN SERVICES HEADER IMAGE -->
+        <div style="line-height: 0; position: relative; overflow: hidden;">
             <img src="images/ValeriePoints.jpg" 
                  alt="Freefall Adventures Services Header" 
                  style="width: 100%; 
@@ -125,7 +136,7 @@
         </div>
 
         <!-- Vertical spacing + centered "Our Services" heading -->
-        <div style="padding: 60px 20px 40px 20px; background-color: #0A1F2F; text-align: center;">
+        <div style="padding: 20px 20px 40px 20px; background-color: #0A1F2F; text-align: center;">
             <h2 style="font-size: 2.6em; 
                        margin: 0; 
                        color: #0077B6; 
