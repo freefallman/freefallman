@@ -85,19 +85,21 @@
             color: #E6EEF4;
             padding: 4em 0 6em 0;
         }
-       /* ============================================= */
-/* MOBILE FIX FOR VALERIE BANNER - NO DESKTOP CHANGE */
+      /* ============================================= */
+/* STRONG MOBILE FIX FOR VALERIE BANNER          */
 /* ============================================= */
 
 @media (max-width: 736px) {
-    /* Force Valerie banner to show full top on phones */
+    /* Force the Valerie banner to be taller and show the top on phones */
     div[style*="overflow: hidden"] {
-        max-height: 92vh !important;
+        max-height: none !important;
+        height: auto !important;
     }
-    
+
     div[style*="overflow: hidden"] img {
+        max-height: 95vh !important;
+        height: auto !important;
         object-position: center top !important;
-        max-height: 92vh !important;
     }
 }
     </style>
