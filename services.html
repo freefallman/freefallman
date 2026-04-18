@@ -85,15 +85,19 @@
             color: #E6EEF4;
             padding: 4em 0 6em 0;
         }
-        /* ============================================= */
-/* MOBILE-ONLY FIX FOR VALERIE BANNER            */
+       /* ============================================= */
+/* MOBILE FIX FOR VALERIE BANNER - NO DESKTOP CHANGE */
 /* ============================================= */
 
 @media (max-width: 736px) {
-    /* Make the top banner taller on phones only */
+    /* Force Valerie banner to show full top on phones */
+    div[style*="overflow: hidden"] {
+        max-height: 92vh !important;
+    }
+    
     div[style*="overflow: hidden"] img {
-        max-height: 88vh !important;
         object-position: center top !important;
+        max-height: 92vh !important;
     }
 }
     </style>
