@@ -13,7 +13,7 @@
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <style>
+        <style>
         /* ============================================= */
         /* FREEFALL ADVENTURES - COLOR & HOVER FIXES     */
         /* ============================================= */
@@ -87,19 +87,27 @@
         }
 
         /* ============================================= */
-        /* STRONG MOBILE FIX FOR VALERIE BANNER          */
+        /* STRONG MOBILE FIX FOR VALERIE BANNER + GAP    */
         /* ============================================= */
         @media (max-width: 736px) {
-            /* Force the Valerie banner to show the full top on phones - no cropping of heads */
+            /* 1. Force Valerie banner to show full top (no head cropping) */
             div[style*="overflow: hidden"] {
                 max-height: none !important;
                 height: auto !important;
+                overflow: visible !important;   /* extra force */
             }
 
             div[style*="overflow: hidden"] img {
                 max-height: none !important;
                 height: auto !important;
+                min-height: 280px !important;   /* ensures good visible height on phones */
+                object-fit: cover !important;
                 object-position: center top !important;
+            }
+
+            /* 2. Lower "Our Services" heading and reduce vertical gap to Tandem section */
+            div[style*="padding: 20px 20px 20px 20px"] {
+                padding: 10px 20px 15px 20px !important;   /* lowered top + much tighter bottom */
             }
         }
     </style>
@@ -130,7 +138,7 @@
             </nav>
         </header>
 
-        <!-- MAIN SERVICES HEADER IMAGE -->
+               <!-- MAIN SERVICES HEADER IMAGE -->
         <div style="line-height: 0; position: relative; overflow: hidden;">
             <img src="images/ValeriePoints.jpg" 
                  alt="Freefall Adventures Services Header" 
@@ -141,8 +149,8 @@
                         object-position: center top;">
         </div>
 
-        <!-- Vertical spacing + centered "Our Services" heading (lowered + reduced gap) -->
-        <div style="padding: 20px 20px 20px 20px; background-color: #0A1F2F; text-align: center;">
+        <!-- Vertical spacing + centered "Our Services" heading (tightened for mobile) -->
+        <div style="padding: 20px 20px 40px 20px; background-color: #0A1F2F; text-align: center;">
             <h2 style="font-size: 2.6em; 
                        margin: 0; 
                        color: #0077B6; 
