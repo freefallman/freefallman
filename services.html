@@ -86,22 +86,23 @@
             padding: 4em 0 6em 0;
         }
 
-                /* ============================================= */
+                   /* ============================================= */
         /* STRONG MOBILE FIX FOR VALERIE BANNER + GAP    */
         /* ============================================= */
         @media (max-width: 736px) {
-            /* Make the Valerie banner container taller on phones */
+            /* Taller vertical dimension for the banner so full content fits */
             div[style*="overflow: hidden"] {
                 max-height: none !important;
-                height: 380px !important;           /* Bigger vertical dimension - adjust if needed */
+                height: 420px !important;           /* Taller container - this is the key change */
                 overflow: hidden !important;
+                background-color: #0A1F2F;          /* Navy fill for any side gaps (minimal) */
             }
 
             div[style*="overflow: hidden"] img {
                 width: 100% !important;
-                height: 100% !important;            /* Fill the taller container */
-                object-fit: cover !important;
-                object-position: center top !important;   /* Keeps heads visible at top */
+                height: 100% !important;
+                object-fit: contain !important;     /* Shows entire important area, no cropping */
+                object-position: center top !important;  /* Keeps heads at the top */
             }
 
             /* Reduce vertical gap between "Our Services" and Tandem Skydiving */
