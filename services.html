@@ -85,39 +85,23 @@
             color: #E6EEF4;
             padding: 4em 0 6em 0;
         }
-      /* ============================================= */
-/* STRONG MOBILE FIX FOR VALERIE BANNER          */
-/* ============================================= */
 
-@media (max-width: 736px) {
-    /* Force the Valerie banner to be taller and show the top on phones */
-    div[style*="overflow: hidden"] {
-        max-height: none !important;
-        height: auto !important;
-    }
+        /* ============================================= */
+        /* STRONG MOBILE FIX FOR VALERIE BANNER          */
+        /* ============================================= */
+        @media (max-width: 736px) {
+            /* Force the Valerie banner to show the full top on phones - no cropping of heads */
+            div[style*="overflow: hidden"] {
+                max-height: none !important;
+                height: auto !important;
+            }
 
-    div[style*="overflow: hidden"] img {
-        max-height: 95vh !important;
-        height: auto !important;
-        object-position: center top !important;
-    }
-}
-   /* ============================================= */
-/* VERY STRONG MOBILE FIX FOR VALERIE BANNER     */
-/* ============================================= */
-
-@media (max-width: 736px) {
-    /* Force Valerie banner to show full top on phones */
-    div[style*="overflow: hidden"] {
-        max-height: none !important;
-    }
-
-    div[style*="overflow: hidden"] img {
-        max-height: 98vh !important;
-        height: auto !important;
-        object-position: center top !important;
-    }
-}
+            div[style*="overflow: hidden"] img {
+                max-height: none !important;
+                height: auto !important;
+                object-position: center top !important;
+            }
+        }
     </style>
 </head>
 
@@ -146,7 +130,7 @@
             </nav>
         </header>
 
-                                      <!-- MAIN SERVICES HEADER IMAGE -->
+        <!-- MAIN SERVICES HEADER IMAGE -->
         <div style="line-height: 0; position: relative; overflow: hidden;">
             <img src="images/ValeriePoints.jpg" 
                  alt="Freefall Adventures Services Header" 
@@ -157,8 +141,8 @@
                         object-position: center top;">
         </div>
 
-        <!-- Vertical spacing + centered "Our Services" heading -->
-        <div style="padding: 20px 20px 40px 20px; background-color: #0A1F2F; text-align: center;">
+        <!-- Vertical spacing + centered "Our Services" heading (lowered + reduced gap) -->
+        <div style="padding: 20px 20px 20px 20px; background-color: #0A1F2F; text-align: center;">
             <h2 style="font-size: 2.6em; 
                        margin: 0; 
                        color: #0077B6; 
@@ -172,7 +156,7 @@
         <section class="services-content">
             <div class="inner">
 
-                                <!-- Tandem Skydiving Section with Image -->
+                <!-- Tandem Skydiving Section with Image -->
                 <div style="display: flex; align-items: center; gap: 2em; flex-wrap: wrap; margin-top: 3em;">
                     <div style="flex: 1; min-width: 300px;">
                         <h3>Tandem Skydiving</h3>
@@ -217,18 +201,17 @@
                     </div>
                 </div>
 
-
             </div>
         </section>
 
         <!-- Footer -->
         <footer id="footer" style="background-color: #081722 !important; padding: 60px 0 !important;">
             <!-- Social Icons -->
-<ul class="icons" style="margin: 0 0 30px 0 !important; padding: 0; list-style: none; display: flex; justify-content: center; gap: 30px; width: 100%;">
-    <li><a href="https://x.com/CCcrossfitman" class="icon brands fa-x-twitter" style="color: #0077B6 !important; font-size: 1.5em;"><span class="label">X</span></a></li>
-    <li><a href="https://www.facebook.com/freefallman.howy" class="icon brands fa-facebook-f" style="color: #0077B6 !important; font-size: 1.5em;"><span class="label">Facebook</span></a></li>
-    <li><a href="mailto:freefallman@yahoo.com" class="icon solid fa-envelope" style="color: #0077B6 !important; font-size: 1.5em;"><span class="label">Email</span></a></li>
-</ul>
+            <ul class="icons" style="margin: 0 0 30px 0 !important; padding: 0; list-style: none; display: flex; justify-content: center; gap: 30px; width: 100%;">
+                <li><a href="https://x.com/CCcrossfitman" class="icon brands fa-x-twitter" style="color: #0077B6 !important; font-size: 1.5em;"><span class="label">X</span></a></li>
+                <li><a href="https://www.facebook.com/freefallman.howy" class="icon brands fa-facebook-f" style="color: #0077B6 !important; font-size: 1.5em;"><span class="label">Facebook</span></a></li>
+                <li><a href="mailto:freefallman@yahoo.com" class="icon solid fa-envelope" style="color: #0077B6 !important; font-size: 1.5em;"><span class="label">Email</span></a></li>
+            </ul>
             <ul class="copyright" style="color: rgba(255,255,255,0.4); text-align: center;">
                 <li>&copy; 2026 FREEFALL ADVENTURES</li>
                 <li>Design: <a href="http://html5up.net" style="color: rgba(255,255,255,0.4) !important;">HTML5 UP</a></li>
