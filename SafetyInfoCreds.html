@@ -13,115 +13,138 @@
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <style>
-        /* ============================================= */
-        /* FREEFALL ADVENTURES - COLOR & HOVER FIXES     */
-        /* ============================================= */
+   <style>
+    /* ============================================= */
+    /* FREEFALL ADVENTURES - CONSISTENT BOLD TEXT    */
+    /* ============================================= */
 
-        /* All main text changed to dark navy #0A1F2F */
-        h1, h2, h3, h4, h5, h6,
-        p, strong, li,
-        .expand-content,
-        .faq-answer {
-            color: #0A1F2F !important;
-        }
+    /* Base text color */
+    h1, h2, h3, h4, h5, h6,
+    p, strong, li,
+    .expand-content,
+    .faq-answer,
+    td, th {
+        color: #0A1F2F !important;
+    }
 
-        /* Links stay blue for visibility */
-        a, a:hover, 
-        #header nav ul li a,
-        #header nav ul li a:hover {
-            color: #0077B6 !important;
-        }
+    /* ============================================= */
+    /* CONSISTENT BOLD TEXT - EVERYWHERE             */
+    /* ============================================= */
 
-        /* Dark Navy — Header & Title Bar ONLY */
-        #header,
-        #header.alt,
-        section[style*="background-color: #0A1F2F"] {
-            background-color: #0A1F2F !important;
-        }
+    /* All body content = strong & consistent */
+    p, li, .expand-content, .faq-answer,
+    table tbody td, table tbody tr td,
+    div[style*="padding"], div[style*="line-height"] {
+        font-weight: 700 !important;
+        line-height: 1.65 !important;
+    }
 
-        /* YOUR SKY BACKGROUND — banner.jpg */
-        body.landing #page-wrapper {
-            background-color: transparent !important;
-            background-image: url("images/banner.jpg") !important;
-            background-size: cover !important;
-            background-position: center center !important;
-            background-attachment: fixed !important;
-            background-repeat: no-repeat !important;
-        }
+    /* Accordion headers & FAQ questions */
+    [onclick*=".expand-content"] > div:first-child,
+    [onclick*=".faq-answer"] > div:first-child {
+        font-weight: 700 !important;
+        font-size: 1.18em !important;
+        letter-spacing: -0.015em;
+        color: #0A1F2F !important;
+    }
 
-        /* Remove any dark overlays from the template */
-        body.landing::before,
-        #page-wrapper::before,
-        body.landing #page-wrapper::before {
-            content: none !important;
-            background: transparent !important;
-            opacity: 0 !important;
-        }
+    /* Headings stay distinct */
+    h1 { font-weight: 800 !important; }
+    h2 { font-weight: 700 !important; font-size: 2.2em !important; }
+    h3 { font-weight: 700 !important; font-size: 1.8em !important; }
+    h4 { font-weight: 700 !important; }
 
-        a {
-            transition: transform 0.3s ease;
-        }
+    strong {
+        font-weight: 800 !important;
+    }
 
-        a:hover {
-            transform: scale(1.15) !important;
-        }
+    /* Links */
+    a, a:hover, 
+    #header nav ul li a,
+    #header nav ul li a:hover {
+        color: #0077B6 !important;
+        font-weight: 700 !important;
+    }
 
-        /* HAMBURGER MENU */
-        #menu {
-            background-color: #0A1F2F !important;
-        }
+    /* Dark Navy backgrounds */
+    #header,
+    #header.alt,
+    section[style*="background-color: #0A1F2F"] {
+        background-color: #0A1F2F !important;
+    }
 
-        #menu ul li a {
-            color: #E6EEF4 !important;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
+    /* Sky background */
+    body.landing #page-wrapper {
+        background-color: transparent !important;
+        background-image: url("images/banner.jpg") !important;
+        background-size: cover !important;
+        background-position: center center !important;
+        background-attachment: fixed !important;
+        background-repeat: no-repeat !important;
+    }
 
-        #menu ul li a:hover {
-            color: #00B4FF !important;
-            background-color: rgba(0, 180, 255, 0.15) !important;
-            border-radius: 4px;
-            transform: scale(1.05);
-            padding: 8px 16px;
-        }
+    /* Remove overlays */
+    body.landing::before,
+    #page-wrapper::before,
+    body.landing #page-wrapper::before {
+        content: none !important;
+        background: transparent !important;
+        opacity: 0 !important;
+    }
 
-        #header nav ul li.special a.menuToggle:hover {
-            color: #00B4FF !important;
-            background-color: transparent !important;
-        }
+    /* Hover effects */
+    a {
+        transition: transform 0.3s ease;
+    }
+    a:hover {
+        transform: scale(1.15) !important;
+    }
 
-        /* Content area */
-        .safety-content {
-            background-color: #0A1F2F;
-            color: #0A1F2F;
-            padding: 4em 0 6em 0;
-        }
+    /* Menu */
+    #menu {
+        background-color: #0A1F2F !important;
+    }
+    #menu ul li a {
+        color: #E6EEF4 !important;
+        font-weight: 600 !important;
+    }
+    #menu ul li a:hover {
+        color: #00B4FF !important;
+        background-color: rgba(0, 180, 255, 0.15) !important;
+        border-radius: 4px;
+        transform: scale(1.05);
+        padding: 8px 16px;
+    }
 
-        .expand-content,
-        .faq-answer {
-            display: none;
-        }
+    .highlight-box {
+        background: rgba(0, 119, 182, 0.12);
+        border-left: 5px solid #0077B6;
+        padding: 1.8em;
+        border-radius: 6px;
+    }
 
-        .highlight-box {
-            background: rgba(0, 119, 182, 0.12);
-            border-left: 5px solid #0077B6;
-            padding: 1.8em;
-            border-radius: 6px;
-        }
+    .image-fit-enhanced {
+        border-radius: 12px;
+        overflow: hidden;
+        border: 4px solid #0077B6;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+        transition: transform 0.3s ease;
+    }
+    .image-fit-enhanced:hover {
+        transform: scale(1.03);
+    }
 
-        .image-fit-enhanced {
-            border-radius: 12px;
-            overflow: hidden;
-            border: 4px solid #0077B6;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
-            transition: transform 0.3s ease;
-        }
-
-        .image-fit-enhanced:hover {
-            transform: scale(1.03);
-        }
-    </style>
+    /* LIGHTER WHITE PANELS — 25% less opaque */
+    div[style*="display: flex"], 
+    div[style*="margin-bottom: 5em"],
+    div[style*="margin-bottom: 4em"] {
+        background: rgba(255, 255, 255, 0.65) !important;
+        border-radius: 16px !important;
+        padding: 2.8em !important;
+        margin-bottom: 3em !important;
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18) !important;
+    }
+</style>
 </head>
 
 <body class="landing is-preload">
